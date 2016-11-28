@@ -1,0 +1,688 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4DAF2F9CA21FD4364E9A3CA7D1F951FB /* SwiftEventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEB2C7D3B8D55E137052A40325403B1 /* SwiftEventBus.swift */; };
+		521DCB2326BBBCA3068B7D8F62544013 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		6AD795E024F8A64E04A625DBE4533221 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		B94AB85265DD200705EF6DF87993F154 /* Pods-MannDrops-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 452D1BC87376B804776294B7F8AC7353 /* Pods-MannDrops-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4F504D7B9A1CFFF84A96ADEB0A8F659 /* Pods-MannDrops-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D6858CDAE678D5F182ECD2C9CF6FA81F /* Pods-MannDrops-dummy.m */; };
+		D7C0C9B07F257931DD629C1972AE2E54 /* SwiftEventBus-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 168544A7521BE568849772E53E7BCA59 /* SwiftEventBus-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD3433DCB57B5A29853702CE94E8DF55 /* SwiftEventBus-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1680B56BDA15B02C53DE33E18A9198 /* SwiftEventBus-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A0AB130295A3F3E10A9BD43C1AC4E1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D773E52440D89CE2665808627CE18A00;
+			remoteInfo = SwiftEventBus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00CFCCA304F897BC8A83EDF6214F1569 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		00FB80305E9636B8BF1F02C28B5829B9 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		0116EF3444AD56B288298E762546E021 /* Pods-MannDrops-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MannDrops-acknowledgements.markdown"; sourceTree = "<group>"; };
+		168544A7521BE568849772E53E7BCA59 /* SwiftEventBus-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftEventBus-umbrella.h"; sourceTree = "<group>"; };
+		18BD1AF3119920744D6966C1A4DC4236 /* Pods-MannDrops-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MannDrops-acknowledgements.plist"; sourceTree = "<group>"; };
+		2225C99802C1426976974ED4BEBDFAF0 /* Pods-MannDrops.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MannDrops.debug.xcconfig"; sourceTree = "<group>"; };
+		23065335971204BF5538779A6CF40A16 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
+		3185A87C25318AA3A185D41DC88FB32F /* Pods-MannDrops-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MannDrops-frameworks.sh"; sourceTree = "<group>"; };
+		37B62C22BA0BDEEE1F474E13C8DE08D8 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		39D4134F485FA4F4CB48148D44EE528D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		452D1BC87376B804776294B7F8AC7353 /* Pods-MannDrops-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MannDrops-umbrella.h"; sourceTree = "<group>"; };
+		4755D0B77A2EA94A6614D3EE9D8CCE43 /* Pods-MannDrops.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MannDrops.modulemap"; sourceTree = "<group>"; };
+		4F461AA2CB0A316D652AB9766F626155 /* SwiftEventBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftEventBus.framework; path = SwiftEventBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FC6B3EB85890DDA6212A0126181F892 /* SwiftEventBus.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftEventBus.xcconfig; sourceTree = "<group>"; };
+		7AACA5B421DB1EF3AFA62A4F0B6ADAA6 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FAE04C456B293AB3CB811778FCE858F /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		AEF646332A57F5E7EA7FBABF9CE0966A /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		B76108A2900F9216B9F1A798F6B294CE /* Pods-MannDrops-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MannDrops-resources.sh"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CF1680B56BDA15B02C53DE33E18A9198 /* SwiftEventBus-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftEventBus-dummy.m"; sourceTree = "<group>"; };
+		CFEB2C7D3B8D55E137052A40325403B1 /* SwiftEventBus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftEventBus.swift; path = SwiftEventBus/SwiftEventBus.swift; sourceTree = "<group>"; };
+		D5F94C0DCFFD42DF0F96225F7379F914 /* SwiftEventBus.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftEventBus.modulemap; sourceTree = "<group>"; };
+		D6858CDAE678D5F182ECD2C9CF6FA81F /* Pods-MannDrops-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MannDrops-dummy.m"; sourceTree = "<group>"; };
+		D6B6A891D37EB476089202C8A2491B53 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E879E58FC870FDB2D2B99B4D5D9CA322 /* Pods-MannDrops.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MannDrops.release.xcconfig"; sourceTree = "<group>"; };
+		E94B7A1E228C0862E008C2C91949DC96 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		ECA91FD589F635BCDE9179CBAF5432A2 /* Pods_MannDrops.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MannDrops.framework; path = "Pods-MannDrops.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE8EFD594FCE57A1869215642BA403BF /* SwiftEventBus-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftEventBus-prefix.pch"; sourceTree = "<group>"; };
+		FABC809647FC278AFA4E7B0428E4548E /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5F3C78E0304911F7A184A229CD12DE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AD795E024F8A64E04A625DBE4533221 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F01117D2B10C1B82B05F278F9FB383CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				521DCB2326BBBCA3068B7D8F62544013 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		114CEFF69D985434CDB17FB099847005 /* Pods-MannDrops */ = {
+			isa = PBXGroup;
+			children = (
+				D6B6A891D37EB476089202C8A2491B53 /* Info.plist */,
+				4755D0B77A2EA94A6614D3EE9D8CCE43 /* Pods-MannDrops.modulemap */,
+				0116EF3444AD56B288298E762546E021 /* Pods-MannDrops-acknowledgements.markdown */,
+				18BD1AF3119920744D6966C1A4DC4236 /* Pods-MannDrops-acknowledgements.plist */,
+				D6858CDAE678D5F182ECD2C9CF6FA81F /* Pods-MannDrops-dummy.m */,
+				3185A87C25318AA3A185D41DC88FB32F /* Pods-MannDrops-frameworks.sh */,
+				B76108A2900F9216B9F1A798F6B294CE /* Pods-MannDrops-resources.sh */,
+				452D1BC87376B804776294B7F8AC7353 /* Pods-MannDrops-umbrella.h */,
+				2225C99802C1426976974ED4BEBDFAF0 /* Pods-MannDrops.debug.xcconfig */,
+				E879E58FC870FDB2D2B99B4D5D9CA322 /* Pods-MannDrops.release.xcconfig */,
+			);
+			name = "Pods-MannDrops";
+			path = "Target Support Files/Pods-MannDrops";
+			sourceTree = "<group>";
+		};
+		1A8BF09B477B60B7DDF81354E79E3F35 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7AACA5B421DB1EF3AFA62A4F0B6ADAA6 /* Firebase.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		1DD1DDD585E00F45C5EB9DA9942826B6 /* SwiftEventBus */ = {
+			isa = PBXGroup;
+			children = (
+				CFEB2C7D3B8D55E137052A40325403B1 /* SwiftEventBus.swift */,
+				6EBD223527166281187C01E2367F1EE5 /* Support Files */,
+			);
+			name = SwiftEventBus;
+			path = SwiftEventBus;
+			sourceTree = "<group>";
+		};
+		310E64E5DC6D0F5663067FA59397EE58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37B62C22BA0BDEEE1F474E13C8DE08D8 /* GoogleUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3876EADCD3E90C3A3E69637332414437 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7040CAC162009CF94F78A50FD733113D /* Firebase */,
+				A52B77FD5B01A197DCC559615097401F /* FirebaseAnalytics */,
+				51C82D03922E89B1F9387EE66426C297 /* FirebaseCore */,
+				389686E0C780AD6946047937BE1D00F2 /* FirebaseDatabase */,
+				A84313466A08EDCA027D39B8C5341778 /* FirebaseInstanceID */,
+				BBFC28ECE3D78D265EF4360DF2A11E2A /* GoogleInterchangeUtilities */,
+				5321F5E2E12A7BCE29E2C242A5492662 /* GoogleSymbolUtilities */,
+				42C60EC8929846D22137BFDA8BF46197 /* GoogleUtilities */,
+				1DD1DDD585E00F45C5EB9DA9942826B6 /* SwiftEventBus */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		389686E0C780AD6946047937BE1D00F2 /* FirebaseDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				C1AAEC501269E706CC05F2BF3F464807 /* Frameworks */,
+			);
+			name = FirebaseDatabase;
+			path = FirebaseDatabase;
+			sourceTree = "<group>";
+		};
+		42C60EC8929846D22137BFDA8BF46197 /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				310E64E5DC6D0F5663067FA59397EE58 /* Frameworks */,
+			);
+			name = GoogleUtilities;
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		51C82D03922E89B1F9387EE66426C297 /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				6BB2E793BD994B795C62E56995885EAD /* Frameworks */,
+			);
+			name = FirebaseCore;
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		5321F5E2E12A7BCE29E2C242A5492662 /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				FD67B12D984FCCADE31B1A5EEC1E4AFE /* Frameworks */,
+			);
+			name = GoogleSymbolUtilities;
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		5CAC83ADA4A652BBCEE8D02E2C974C5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FAE04C456B293AB3CB811778FCE858F /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		68DADDB9ED19AECFF57BF7219F981016 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				114CEFF69D985434CDB17FB099847005 /* Pods-MannDrops */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		6BB2E793BD994B795C62E56995885EAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FABC809647FC278AFA4E7B0428E4548E /* FirebaseCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6EBD223527166281187C01E2367F1EE5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				39D4134F485FA4F4CB48148D44EE528D /* Info.plist */,
+				D5F94C0DCFFD42DF0F96225F7379F914 /* SwiftEventBus.modulemap */,
+				6FC6B3EB85890DDA6212A0126181F892 /* SwiftEventBus.xcconfig */,
+				CF1680B56BDA15B02C53DE33E18A9198 /* SwiftEventBus-dummy.m */,
+				EE8EFD594FCE57A1869215642BA403BF /* SwiftEventBus-prefix.pch */,
+				168544A7521BE568849772E53E7BCA59 /* SwiftEventBus-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftEventBus";
+			sourceTree = "<group>";
+		};
+		7040CAC162009CF94F78A50FD733113D /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				1A8BF09B477B60B7DDF81354E79E3F35 /* Core */,
+			);
+			name = Firebase;
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				3876EADCD3E90C3A3E69637332414437 /* Pods */,
+				FC3636CE809383D5FC28B444D9C7E60E /* Products */,
+				68DADDB9ED19AECFF57BF7219F981016 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A52B77FD5B01A197DCC559615097401F /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				5CAC83ADA4A652BBCEE8D02E2C974C5B /* Frameworks */,
+			);
+			name = FirebaseAnalytics;
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		A84313466A08EDCA027D39B8C5341778 /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				23065335971204BF5538779A6CF40A16 /* FIRInstanceID.h */,
+				FC45555BD214887163BED660DD3A93AD /* Frameworks */,
+			);
+			name = FirebaseInstanceID;
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		BBFC28ECE3D78D265EF4360DF2A11E2A /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				DA9F2EDD818FD57126435D910F23DDC5 /* Frameworks */,
+			);
+			name = GoogleInterchangeUtilities;
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1AAEC501269E706CC05F2BF3F464807 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00CFCCA304F897BC8A83EDF6214F1569 /* FirebaseDatabase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA9F2EDD818FD57126435D910F23DDC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00FB80305E9636B8BF1F02C28B5829B9 /* GoogleInterchangeUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC3636CE809383D5FC28B444D9C7E60E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECA91FD589F635BCDE9179CBAF5432A2 /* Pods_MannDrops.framework */,
+				4F461AA2CB0A316D652AB9766F626155 /* SwiftEventBus.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC45555BD214887163BED660DD3A93AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEF646332A57F5E7EA7FBABF9CE0966A /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD67B12D984FCCADE31B1A5EEC1E4AFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E94B7A1E228C0862E008C2C91949DC96 /* GoogleSymbolUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		35913073F728CF75BE025F7C1BB1C410 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7C0C9B07F257931DD629C1972AE2E54 /* SwiftEventBus-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E071D85EF5ED276B914989DFDC556DB9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B94AB85265DD200705EF6DF87993F154 /* Pods-MannDrops-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7B11F2800DA45F476C96AB2F0113F491 /* Pods-MannDrops */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 426FC2A24F989A3FE820761B561F3633 /* Build configuration list for PBXNativeTarget "Pods-MannDrops" */;
+			buildPhases = (
+				4EF8E9A40190949CAC99962B4B5FA1F3 /* Sources */,
+				F01117D2B10C1B82B05F278F9FB383CB /* Frameworks */,
+				E071D85EF5ED276B914989DFDC556DB9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA5FB158EC32F09AE76A9B3A13A395E6 /* PBXTargetDependency */,
+			);
+			name = "Pods-MannDrops";
+			productName = "Pods-MannDrops";
+			productReference = ECA91FD589F635BCDE9179CBAF5432A2 /* Pods_MannDrops.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D773E52440D89CE2665808627CE18A00 /* SwiftEventBus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94B17EE030A4667649A0E8C368145748 /* Build configuration list for PBXNativeTarget "SwiftEventBus" */;
+			buildPhases = (
+				43A2932BBC97D7A62624398192390AF3 /* Sources */,
+				B5F3C78E0304911F7A184A229CD12DE2 /* Frameworks */,
+				35913073F728CF75BE025F7C1BB1C410 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftEventBus;
+			productName = SwiftEventBus;
+			productReference = 4F461AA2CB0A316D652AB9766F626155 /* SwiftEventBus.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = FC3636CE809383D5FC28B444D9C7E60E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B11F2800DA45F476C96AB2F0113F491 /* Pods-MannDrops */,
+				D773E52440D89CE2665808627CE18A00 /* SwiftEventBus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43A2932BBC97D7A62624398192390AF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD3433DCB57B5A29853702CE94E8DF55 /* SwiftEventBus-dummy.m in Sources */,
+				4DAF2F9CA21FD4364E9A3CA7D1F951FB /* SwiftEventBus.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EF8E9A40190949CAC99962B4B5FA1F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4F504D7B9A1CFFF84A96ADEB0A8F659 /* Pods-MannDrops-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA5FB158EC32F09AE76A9B3A13A395E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftEventBus;
+			target = D773E52440D89CE2665808627CE18A00 /* SwiftEventBus */;
+			targetProxy = 4A0AB130295A3F3E10A9BD43C1AC4E1C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		12914D756594D15C6F2CA12FE5F89F1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C019226CB82F7D9D87168764DF5F9A0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FC6B3EB85890DDA6212A0126181F892 /* SwiftEventBus.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftEventBus/SwiftEventBus-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftEventBus/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftEventBus/SwiftEventBus.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftEventBus;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C7E5B4D0A03F01B249A5AEBF14433C23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FC6B3EB85890DDA6212A0126181F892 /* SwiftEventBus.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftEventBus/SwiftEventBus-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftEventBus/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftEventBus/SwiftEventBus.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftEventBus;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E72E7977875C2D251FC62736BBDDC389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC01B357468446B89783EC80A27011B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E879E58FC870FDB2D2B99B4D5D9CA322 /* Pods-MannDrops.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MannDrops/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MannDrops/Pods-MannDrops.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MannDrops;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FB8C4A8C2D3BB8B8EC7A42A4697B45B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2225C99802C1426976974ED4BEBDFAF0 /* Pods-MannDrops.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MannDrops/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MannDrops/Pods-MannDrops.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MannDrops;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12914D756594D15C6F2CA12FE5F89F1B /* Debug */,
+				E72E7977875C2D251FC62736BBDDC389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		426FC2A24F989A3FE820761B561F3633 /* Build configuration list for PBXNativeTarget "Pods-MannDrops" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB8C4A8C2D3BB8B8EC7A42A4697B45B6 /* Debug */,
+				EC01B357468446B89783EC80A27011B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94B17EE030A4667649A0E8C368145748 /* Build configuration list for PBXNativeTarget "SwiftEventBus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C019226CB82F7D9D87168764DF5F9A0B /* Debug */,
+				C7E5B4D0A03F01B249A5AEBF14433C23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

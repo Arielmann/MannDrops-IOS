@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmojiViewController" customModule="MannDrops" customModuleProvider="target">
+            <connections>
+                <outlet property="exerciseLabel" destination="9TK-vd-Uvd" id="RgR-l4-Pd5"/>
+                <outlet property="imageView" destination="P4L-eU-8iO" id="CRl-aJ-I3w"/>
+                <outlet property="view" destination="I2j-X5-VHw" id="kHz-GS-0r6"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="I2j-X5-VHw">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SmallRainDropImage" translatesAutoresizingMaskIntoConstraints="NO" id="P4L-eU-8iO"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9TK-vd-Uvd">
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="P4L-eU-8iO" firstAttribute="width" secondItem="I2j-X5-VHw" secondAttribute="width" id="6VP-69-SvM"/>
+                <constraint firstItem="9TK-vd-Uvd" firstAttribute="centerY" secondItem="I2j-X5-VHw" secondAttribute="centerY" id="CE6-PJ-UIz"/>
+                <constraint firstItem="9TK-vd-Uvd" firstAttribute="centerX" secondItem="I2j-X5-VHw" secondAttribute="centerX" id="IH5-ei-I4U"/>
+                <constraint firstItem="P4L-eU-8iO" firstAttribute="centerX" secondItem="I2j-X5-VHw" secondAttribute="centerX" id="nMj-8T-N9v"/>
+                <constraint firstItem="P4L-eU-8iO" firstAttribute="height" secondItem="I2j-X5-VHw" secondAttribute="height" id="vKo-VB-ulW"/>
+                <constraint firstItem="P4L-eU-8iO" firstAttribute="centerY" secondItem="I2j-X5-VHw" secondAttribute="centerY" id="xY8-Wz-yAl"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="SmallRainDropImage" width="87" height="113"/>
+    </resources>
+</document>
