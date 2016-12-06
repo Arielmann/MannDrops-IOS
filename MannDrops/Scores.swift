@@ -10,8 +10,6 @@ import UIKit
 import CoreData
 import SwiftEventBus
 
-//**********************NOTE: THIS CLASS IS NOT YET ACTIVE*********************************//
-
 class Scores: NSManagedObject {
     
     @NSManaged var item_id : String?
@@ -21,26 +19,21 @@ class Scores: NSManagedObject {
     @NSManaged var errors : Int16
     @NSManaged var date : Date?
     
-    override static func initialize(){
-        SwiftEventBus.onMainThread(self, name:"gameEnded") { _ in
-            self.saveScore(name: SingleGameData.name, score: SingleGameData.score, exercisesSolved: SingleGameData.exercisesSolved, errors: SingleGameData.errors, elaspedTime: "Feature not yet avialable")
-        }
-    }
-    
     
     func dictionaryRepresentation() -> [String:Any]?{
-        guard let uid = AppManager.shared.uid /*, let user_name = AppManager.shared.userName */ else {
+        
+        guard let uid = AppManager.shared.uid else {
             print("no user id found")
             return nil
         }
         
-        return [
-            "date":date ?? Date(),
-            "score":Int(score),
-            "exercises":Int(exercises_solved),
-            "uid":uid,
-            "user_name":name ?? ""
-            /*,"user_name":user_name*/
+        return [ //create the score dictionary with the values
+            Config.NAME: name ?? "Anonymous",
+            Config.SCORE: Int(score),
+            Config.EXERCISES_SOLVED: Int(exercises_solved),
+            Config.ERRORS: Int(errors),
+            Config.DATE: Scores.formatDate(date: date!),
+            Config.UID: uid
         ]
     }
     
@@ -50,45 +43,82 @@ class Scores: NSManagedObject {
             let request: NSFetchRequest<Scores> = NSFetchRequest<Scores>()
             request.entity = NSEntityDescription.entity(forEntityName: "Scores", in: managedContext)
             
-            guard let arr = try? managedContext.fetch(request) else {
+            guard let unSortedarr = try? managedContext.fetch(request) else {
                 return []
             }
             
-            return arr
+            let sortedArr = sortAllScores(unSortedArr: unSortedarr)
+            
+            return sortedArr
         }
     }
     
-    static func saveScore(name: String, score : Int, exercisesSolved : Int, errors: Int, elaspedTime : String) {
-        print("Entered score saving method")
-        
+    static func saveScore(name: String, score : Int, exercisesSolved : Int, errors: Int) -> [String:Any]{
+        print("Entered score saving method") //TODO: shorten function, break it to smaller functions
         let managedContext = LocalDBManager.shared.context
-        
-        let entity =  NSEntityDescription.entity(forEntityName: "Scores",
-                                                 in:managedContext)
-        
-        let newScoreData = NSManagedObject(entity: entity!,
-                                           insertInto: managedContext)
-        
-        newScoreData.setValue(name, forKey: "name")
-        newScoreData.setValue(score, forKey: "score")
-        newScoreData.setValue(exercisesSolved, forKey: "exercises_solved")
-        newScoreData.setValue(errors, forKey: "errors")
-        newScoreData.setValue(elaspedTime, forKey: "elapsed_time")
-        newScoreData.setValue(Date(), forKey: "date")
-        newScoreData.setValue(UUID().uuidString, forKey: "item_id")
+        let entity =  NSEntityDescription.entity(forEntityName: "Scores", in:managedContext)
+        let newScoreData = NSManagedObject(entity: entity!, insertInto: managedContext)
+        newScoreData.setValue(name, forKey: Config.NAME)
+        newScoreData.setValue(score, forKey: Config.SCORE)
+        newScoreData.setValue(exercisesSolved, forKey: Config.EXERCISES_SOLVED)
+        newScoreData.setValue(errors, forKey: Config.ERRORS)
+        newScoreData.setValue("N/A", forKey: Config.ELAPSED_TIME)
+        let date : Date = Date()
+        newScoreData.setValue(date, forKey: Config.DATE)
+        newScoreData.setValue(UUID().uuidString, forKey: Config.ITEM_ID)
         
         do {
             try managedContext.save()
         } catch let error as NSError  {
             print("Could not save \(error), \(error.userInfo)")
         }
+        return [ //create the score dictionary with the values
+            Config.NAME: name,
+            Config.SCORE: Int(score),
+            Config.EXERCISES_SOLVED: exercisesSolved,
+            Config.ERRORS: Int(errors),
+            Config.DATE: Scores.formatDate(date: date),
+        ]
     }
     
     static func removeScore(_ score: Scores) {
         let managedContext = LocalDBManager.shared.context
-        
         managedContext.delete(score)
-        try? managedContext.save() //save delete action
+    }
+    
+    static func removeAllScores() {
+        for score in Scores.allScores{
+            removeScore(score)
+        }
+    }
+    
+    static func deleteAllScores(){
+        for score in allScores{
+            removeScore(score)
+            // try? managedContext.save() - MUST ADD FOR SAVING THE DELETE ACTION
+        }
+        let managedContext = LocalDBManager.shared.context
+        try? managedContext.save()
+    }
+    
+    func saveScoreInEndGame() {
+        SwiftEventBus.onMainThread(self, name:"gameEnded") { _ in
+            //SwiftEventBus.post("login", sender: Person(name: "cesar ferreira"))
+            
+        }
+    }
+    
+    static func formatDate(date : Date) -> String{ //TODO: in core data the Date property should be a string from the first place!!
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yy"
+        let dateString = dateFormatter.string(from: date)
+        return dateString
+    }
+    
+    private static func sortAllScores(unSortedArr: [Scores]) -> [Scores]{
+        let sortedArr = unSortedArr.sorted(by: {$0.score > $1.score})
+        return sortedArr
     }
 }
+
 

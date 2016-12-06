@@ -9,24 +9,20 @@
 import UIKit
 import FirebaseDatabase
 
-//*******************************NOTE: THIS CLASS IS NOT YET ACTIVE***********************//
-
 // a complition block that gets an array of dictioneries, does something with it and returns void
 typealias CompletionBlock = (_ arr : [[String:Any]]) -> Void
 
-class DBManager: NSObject {
-    static let shared = DBManager()
+class FirebaseDBManager: NSObject {
+    static let shared = FirebaseDBManager()
     
     var rootRef: FIRDatabaseReference
     
     override init() {
-        
         rootRef = FIRDatabase.database().reference() //this is our unique data base path
-        
         super.init()
     }
     
-    func saveHighScore(score : [String:Any], targetUser : String){ //save highscore (the dictionary parameter) in firebase. it will save it under the user id (i.e uid) branch which is located in the HIGH SCORES branch
+    func saveHighScore(score : [String:Any], targetUser : String){ //save highscore (the dictionary parameter) in firebase. it will save it under the user id (i.e targetUser parameter which holds a uid) branch which is located in the HIGH SCORES branch
         rootRef.child(Config.TABLE_HIGHSCORES).child(targetUser).setValue(score)
     }
     
@@ -42,21 +38,30 @@ class DBManager: NSObject {
     }
     
     func readAllScores(completion : @escaping CompletionBlock){
-        
-      
         func observeFunc(snapshot : FIRDataSnapshot){
             guard let dict = snapshot.value as? [String:[String:Any]] else {
                 completion([])
                 return
             }
-            
-            completion(Array(dict.values))
+            let unsortedDictsArray = Array(dict.values)
+            let sortedDictsArray = sortScoreDictsArray(unSortedDictsArray: unsortedDictsArray)
+            completion(sortedDictsArray)
         }
         //snapshot - a piece of information from out databse
         //observe = listener
         //value - an enum instance that means we are going to read the data (get the value)
         //go to the highscores branch, read what is written there using our observeFunc method
         rootRef.child(Config.TABLE_HIGHSCORES).observe(.value, with: observeFunc)
-        
+    }
+    
+    
+    private func sortScoreDictsArray(unSortedDictsArray: [[String:Any]]) -> [[String:Any]]{
+       let sortedDictsArray = unSortedDictsArray.sorted {
+            scoreDataObj1, scoreDataObj2 in //define 2 score dictioneries from the array of dictioneries
+            let score1 = scoreDataObj1[Config.SCORE] as! Int //unwrap their score value
+            let score2 = scoreDataObj2[Config.SCORE] as! Int
+            return score1 > score2 //comapre
+        }
+        return sortedDictsArray
     }
 }

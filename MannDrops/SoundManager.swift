@@ -11,8 +11,6 @@ import AVFoundation
 
 class SoundManager: NSObject {
     
-    //**********************NOTE: THIS CLASS IS NOT YET ACTIVE*********************************//
-    
     static let shared = SoundManager()
     let popUrl: URL
     let popSound: AVAudioPlayer

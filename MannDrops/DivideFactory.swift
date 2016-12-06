@@ -22,7 +22,7 @@ class DivideFactory: ExerciseFactory {
          exerciseType is not used. Needed only
          for fully overriding the method in the parent class.
          
-         To create a division exercise we multiply 2 random numbers and
+         To create a divition exercise we multiply 2 random numbers and
          return the result divided by one of them (the first number in this case)
          */
         

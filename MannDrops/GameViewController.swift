@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class GameViewController: UIViewController {
     
     @IBOutlet var allMenuViews: [UIView]!
+    @IBOutlet var allMenuButtons: [UIButton]!
     @IBOutlet var allGameButtons: [UIButton]!
     @IBOutlet weak var startGameButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel! //user's score
@@ -18,9 +20,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var fallingLine: UIView! // raindrop fall until it reaches this border.
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var nameLabel: UITextField!
+    @IBOutlet weak var highScoresButton: UIButton!
     
-    
-    public var isHanldelingFallenRaingDrop = false
     private var screenWidth : CGFloat = 0.0
     private var screenHeight : CGFloat = 0.0
     private var rainDropVcDict: [String : RainDropViewController] = [:]
@@ -31,7 +32,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         deterScreenSizes()
-        adjustMenuButton(button: startGameButton, cornerRadius: 5, borderWidth: 1, borderColor: UIColor.black.cgColor, maskToBounds: true)
+        adjustMenuViews(buttons: allMenuButtons, cornerRadius: 5, borderWidth: 1, borderColor: UIColor.black.cgColor, maskToBounds: true)
         
         for button in allGameButtons{
             AnimationsManager.shared.fadeViewAnimation(controller : self, view: button, duration: 0, targetAlphaLevel: 0)
@@ -39,17 +40,25 @@ class GameViewController: UIViewController {
         }
     }
     
-    private func adjustMenuButton(button : UIButton, cornerRadius : Int, borderWidth : Int, borderColor : CGColor, maskToBounds : Bool){
-        button.layer.cornerRadius = CGFloat(cornerRadius)
-        button.layer.borderWidth = CGFloat(borderWidth)
-        button.layer.borderColor = borderColor
-        button.layer.masksToBounds = maskToBounds
+    private func adjustMenuViews(buttons : [UIButton], cornerRadius : Int, borderWidth : Int, borderColor : CGColor, maskToBounds : Bool){
+        nameLabel.text = AppManager.shared.userName ?? "Name"
+        for button in buttons{
+            button.layer.cornerRadius = CGFloat(cornerRadius)
+            button.layer.borderWidth = CGFloat(borderWidth)
+            button.layer.borderColor = borderColor
+            button.layer.masksToBounds = maskToBounds
+        }
+    }
+    @IBAction func saveName(_ sender: AnyObject) {
+        SingleGameData.name = nameLabel.text!
     }
     
     @IBAction func startGame(_ sender: UIButton) {
+        
         startGameButton.isEnabled = false
         self.nameLabel.isEnabled = false
         SingleGameData.name = nameLabel.text ?? "Anonymous"
+        AppManager.shared.userName = SingleGameData.name
         SingleGameData.lives = 3
         for view in allMenuViews{
             AnimationsManager.shared.fadeViewAnimation(controller : self, view: view, duration: 1, targetAlphaLevel: 0)
@@ -86,23 +95,41 @@ class GameViewController: UIViewController {
         AnimationsManager.shared.animateRainDrop(gameController: self, rainDrop: goldenRainDrop, rainDropVC: goldenRainDropVcDict[controllerId]!)
     }
     
+    let internalQueue: DispatchQueue = DispatchQueue(label:"LockingQueue")
+    
     public func handleFallenRainDrop(rainDrop : RainDrop, controller : RainDropViewController){
-        cleanAllRainDropsFromScreen()
-        SingleGameData.lives -= 1
-        print("Rain dropped. Xcord: " + controller.view.frame.origin.x.description)
-        print("Lives remaining: " + (SingleGameData.lives.description))
-        if(SingleGameData.lives == 0){
-            gameEnded()
-        }else{
+        
+        internalQueue.sync {
+            guard RainDrop.shouldHandle else{ //Guard: if condition is met do code below. else enter else (return)
+                return
+            }
+            cleanAllRainDropsFromScreen()
+            SingleGameData.lives -= 1
+            print("Rain dropped. Xcord: " + controller.view.frame.origin.x.description)
+            print("Lives remaining: " + (SingleGameData.lives.description))
+            guard SingleGameData.lives != 0 else{
+                RainDrop.shouldHandle = true
+                gameEnded()
+                return
+            }
             createFadingPenaltyLabel(penaltyText: String(SingleGameData.lives) + " lives remain", fontSize : 30)
         }
-         isHanldelingFallenRaingDrop = false
+        
     }
     
     private func gameEnded(){
         TimersManager.shared.InvalidateAllTimers()
         cleanAllRainDropsFromScreen() //Make sure there are no drops left
+        let currentScoreDict : [String:Any] = Scores.saveScore(name: SingleGameData.name, score: SingleGameData.score, exercisesSolved: Int(SingleGameData.exercisesSolved), errors: Int(SingleGameData.errors))
+        saveToFirebaseHighScore(scoreData: currentScoreDict, targetUser: AppManager.shared.uid!)
         showGameEndedAlert()
+    }
+    
+    private func saveToFirebaseHighScore(scoreData: [String:Any], targetUser : String){
+        if(Int16(SingleGameData.score) > Scores.allScores[0].score){ //if game score is larger than highest score
+            FirebaseDBManager.shared.saveHighScore(score: scoreData, targetUser: targetUser) //save it to Firebase
+            print("Highscore: " + scoreLabel.text!, " was saved to Firebase")
+        }
     }
     
     @IBAction func addNumberToResultLabel(_ sender: UIButton) {
@@ -111,7 +138,7 @@ class GameViewController: UIViewController {
     
     @IBAction func deleteNumberFromResultLabel(_ sender: UIButton) {
         if(resultLabel.text != " "){
-            resultLabel.text!.remove(at:  (resultLabel.text?.index(before:  (resultLabel.text?.endIndex)!))!)
+            resultLabel.text!.remove(at:  (resultLabel.text?.index(before: (resultLabel.text?.endIndex)!))!)
         }
     }
     
@@ -247,9 +274,6 @@ class GameViewController: UIViewController {
         self.scoreLabel.text = "0"
         
     }
-    
-    
-    
 }
 
 

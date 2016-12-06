@@ -12,7 +12,7 @@ class RainDropViewController: UIViewController {
     
     @IBOutlet weak var exerciseLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-    var rainDrop: RainDrop! = RainDrop(exercise : "0 + 0") //Default initializing/ altered during init()
+    var rainDrop: RainDrop! = RainDrop(exercise : "0 + 0") //TODO: doesn't not need to be initialized here. fix init()
     
     init(rainDrop: RainDrop){
         super.init(nibName: nil, bundle: nil)
@@ -28,5 +28,15 @@ class RainDropViewController: UIViewController {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //imageView.frame = self.view.bounds
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }

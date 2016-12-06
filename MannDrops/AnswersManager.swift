@@ -23,8 +23,9 @@ class AnswersManager: NSObject {
         print("Error generating answer")
         return "Error generating answer"
     }
+}
     
-    
+    /*
     func handleUserAnswer(resultLabel : UILabel, rainDropVcDict : [String : RainDropViewController], goldenRainDropVcDict : [String : RainDropViewController]) {
         let userAnswerWithSpace = resultLabel.text!
         let finalUserAnswer = userAnswerWithSpace.trimmingCharacters(in: .whitespaces)
@@ -34,6 +35,7 @@ class AnswersManager: NSObject {
             let answer = goldenRainDropVC.rainDrop.answer
             if(finalUserAnswer == answer!){
                 print(" User has answered \(finalUserAnswer.description) and was correct. Answer:\(answer)")
+               //USE EVENT BUS
                 return //all rainDrops are removed. Exit method
             }
         }
@@ -42,13 +44,13 @@ class AnswersManager: NSObject {
             let answer = rainDropVC.rainDrop.answer
             if(finalUserAnswer == answer!){
                 print(" User has answered \(finalUserAnswer.description) and was correct. Answer:\(answer)")
+               //USE EVENT BUS
                 }
             else{
                 print("Current index answer: \(answer) doesn't match user's answer \(finalUserAnswer.description)")
             }
         }
+ */
 
-    }
-}
 
 

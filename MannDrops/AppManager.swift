@@ -9,9 +9,6 @@
 import UIKit
 
 class AppManager: NSObject {
-    
-    //*********************NOTE: THIS CLASS IS NOT YET ACTIVE************************//
-    
     static let shared = AppManager()
     
     var uid : String?{

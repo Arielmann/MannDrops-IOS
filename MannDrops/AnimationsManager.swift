@@ -9,9 +9,10 @@
 import UIKit
 
 class AnimationsManager: NSObject {
-
+    
     static let shared = AnimationsManager()
     
+    private let internalQueue: DispatchQueue = DispatchQueue(label:"LockingQueue")
     private var popImages = [#imageLiteral(resourceName: "FirstPopAnimationImage"), #imageLiteral(resourceName: "SecondPopAnimationImage"), #imageLiteral(resourceName: "ThirdPopAnimationImage")]
     
     public func animateRainDrop(gameController : GameViewController, rainDrop: RainDrop, rainDropVC: RainDropViewController){
@@ -19,11 +20,18 @@ class AnimationsManager: NSObject {
         UIView.animate(withDuration: rainDrop.droppingTime, delay: 0, options: .curveLinear, animations: { //Drop the vc down the screen
             rainDropVC.view.frame.origin.y += gameController.fallingLine.frame.origin.y - 40
             }, completion: { finished in
-                if(rainDropVC.view.isDescendant(of: gameController.view)) && !gameController.isHanldelingFallenRaingDrop{
-                    gameController.isHanldelingFallenRaingDrop = true
+                guard rainDropVC.view.isDescendant(of: gameController.view) else{
+                    return
+                }
+                self.internalQueue.sync {
+                    guard RainDrop.shouldHandle else{
+                        return
+                    }
+                    RainDrop.shouldHandle = false
                     gameController.handleFallenRainDrop(rainDrop: rainDrop, controller: rainDropVC)
                 }
         })
+        RainDrop.shouldHandle = true
     }
     
     func popAndRemoveAnimation(rainDropVC : RainDropViewController){
@@ -54,7 +62,7 @@ class AnimationsManager: NSObject {
             view.alpha = targetAlphaLevel
             }, completion: nil)
     }
-
+    
     public func fadeViewAnimationAndAddToParent(controller : UIViewController, view: UIView, duration : Double, targetAlphaLevel : CGFloat){
         UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: {
             view.alpha = targetAlphaLevel
@@ -62,5 +70,4 @@ class AnimationsManager: NSObject {
                 controller.view.addSubview(view)
         })
     }
-    
 }

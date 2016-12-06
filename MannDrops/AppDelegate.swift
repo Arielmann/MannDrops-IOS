@@ -15,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        //Scores.removeAllScores()
+        FIRApp.configure()
+        FIRDatabase.database().persistenceEnabled = true // init Firebase
+        guard AppManager.shared.uid != nil else{
+            AppManager.shared.uid = UUID().uuidString
+            return true
+        }
         return true
     }
     

@@ -44,6 +44,8 @@ class TimersManager: NSObject {
     public func initTimers(controller : GameViewController){
         
         timers.append(Timer.scheduledTimer(timeInterval: 0, target: controller, selector: #selector(GameViewController.willAnimateRainDrop(timer:)), userInfo: ExercisesDataModel.Easy(), repeats: false)) //init first exercise after zero seconds. non repeatable
+         timers.append(Timer.scheduledTimer(timeInterval: 2, target: controller, selector: #selector(GameViewController.willAnimateRainDrop(timer:)), userInfo: ExercisesDataModel.Easy(), repeats: true))
+         timers.append(Timer.scheduledTimer(timeInterval: 2, target: controller, selector: #selector(GameViewController.willAnimateRainDrop(timer:)), userInfo: ExercisesDataModel.Easy(), repeats: true))
         
         var exerciseTimerModels = [ExercisesTimerModel]() //Define exercise timers
         
