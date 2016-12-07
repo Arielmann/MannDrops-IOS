@@ -12,7 +12,7 @@ class AnimationsManager: NSObject {
     
     static let shared = AnimationsManager()
     
-    private let internalQueue: DispatchQueue = DispatchQueue(label:"LockingQueue")
+    //private let internalQueue: DispatchQueue = DispatchQueue(label:"LockingQueue")
     private var popImages = [#imageLiteral(resourceName: "FirstPopAnimationImage"), #imageLiteral(resourceName: "SecondPopAnimationImage"), #imageLiteral(resourceName: "ThirdPopAnimationImage")]
     
     public func animateRainDrop(gameController : GameViewController, rainDrop: RainDrop, rainDropVC: RainDropViewController){
@@ -20,18 +20,11 @@ class AnimationsManager: NSObject {
         UIView.animate(withDuration: rainDrop.droppingTime, delay: 0, options: .curveLinear, animations: { //Drop the vc down the screen
             rainDropVC.view.frame.origin.y += gameController.fallingLine.frame.origin.y - 40
             }, completion: { finished in
-                guard rainDropVC.view.isDescendant(of: gameController.view) else{
-                    return
-                }
-                self.internalQueue.sync {
-                    guard RainDrop.shouldHandle else{
-                        return
-                    }
-                    RainDrop.shouldHandle = false
+                if(rainDropVC.view.isDescendant(of: gameController.view)){
                     gameController.handleFallenRainDrop(rainDrop: rainDrop, controller: rainDropVC)
                 }
         })
-        RainDrop.shouldHandle = true
+        
     }
     
     func popAndRemoveAnimation(rainDropVC : RainDropViewController){
@@ -49,6 +42,30 @@ class AnimationsManager: NSObject {
             //SoundManager.shared.playPopSound()
         }
     }
+    
+    
+    public func changeLabelTextAsync(label: UILabel, index : Int){
+        var innerIndex = index
+        var labelText = "Loading"
+        var strings : [String] =  ["Loading", "Loading.", "Loading..", "Loading..."]
+        DispatchQueue.global().async {
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3) {
+                guard(label.alpha == 1)else{
+                    return
+                }
+                labelText = strings[index]
+                DispatchQueue.main.async {
+                    label.text = labelText
+                    innerIndex += 1
+                    if(innerIndex > 3){
+                        innerIndex = 0
+                    }
+                    self.changeLabelTextAsync(label: label, index: innerIndex)
+                }
+            }
+        }
+    }
+    
     
     @objc private func changeImage(timer : Timer){
         let timerInfo = timer.userInfo as! [String : Any]

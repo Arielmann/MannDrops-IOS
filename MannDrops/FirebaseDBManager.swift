@@ -47,16 +47,21 @@ class FirebaseDBManager: NSObject {
             let sortedDictsArray = sortScoreDictsArray(unSortedDictsArray: unsortedDictsArray)
             completion(sortedDictsArray)
         }
-        //snapshot - a piece of information from out databse
-        //observe = listener
-        //value - an enum instance that means we are going to read the data (get the value)
-        //go to the highscores branch, read what is written there using our observeFunc method
-        rootRef.child(Config.TABLE_HIGHSCORES).observe(.value, with: observeFunc)
+        rootRef.child(Config.TABLE_HIGHSCORES).observe(.value, with: observeFunc) //go to the highscores branch, read what is written there using our observeFunc method
+        // For limiting query: rootRef.child(Config.TABLE_HIGHSCORES).queryLimited(toLast: 10).observe(.value, with: observeFunc)
+        
+        /*
+          Terms key:
+          snapshot - A piece of information from out databse
+          observe = Listener
+          value - An enum instance that means we are going to read the data (get the value)
+       */
+ 
     }
     
     
     private func sortScoreDictsArray(unSortedDictsArray: [[String:Any]]) -> [[String:Any]]{
-       let sortedDictsArray = unSortedDictsArray.sorted {
+        let sortedDictsArray = unSortedDictsArray.sorted {
             scoreDataObj1, scoreDataObj2 in //define 2 score dictioneries from the array of dictioneries
             let score1 = scoreDataObj1[Config.SCORE] as! Int //unwrap their score value
             let score2 = scoreDataObj2[Config.SCORE] as! Int

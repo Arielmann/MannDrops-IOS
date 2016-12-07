@@ -28,7 +28,6 @@ class GameViewController: UIViewController {
     private var goldenRainDropVcDict: [String : RainDropViewController] = [:]
     private let easyModel : ExercisesDataModel.Easy = ExercisesDataModel.Easy()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         deterScreenSizes()
@@ -41,7 +40,8 @@ class GameViewController: UIViewController {
     }
     
     private func adjustMenuViews(buttons : [UIButton], cornerRadius : Int, borderWidth : Int, borderColor : CGColor, maskToBounds : Bool){
-        nameLabel.text = AppManager.shared.userName ?? "Name"
+        nameLabel.text = AppManager.shared.userName ?? "You"
+        nameLabel.textAlignment = .center
         for button in buttons{
             button.layer.cornerRadius = CGFloat(cornerRadius)
             button.layer.borderWidth = CGFloat(borderWidth)
@@ -57,8 +57,7 @@ class GameViewController: UIViewController {
         
         startGameButton.isEnabled = false
         self.nameLabel.isEnabled = false
-        SingleGameData.name = nameLabel.text ?? "Anonymous"
-        AppManager.shared.userName = SingleGameData.name
+
         SingleGameData.lives = 3
         for view in allMenuViews{
             AnimationsManager.shared.fadeViewAnimation(controller : self, view: view, duration: 1, targetAlphaLevel: 0)
@@ -66,9 +65,20 @@ class GameViewController: UIViewController {
         
         for button in allGameButtons{
             button.isEnabled = true
+            print(button.description)
             AnimationsManager.shared.fadeViewAnimation(controller : self, view: button, duration: 1.5, targetAlphaLevel: 1)
         }
+        fallingLine.frame = CGRect(x: fallingLine.frame.origin.x, y: fallingLine.frame.origin.y, width: fallingLine.frame.width, height: 1)
         TimersManager.shared.initTimers(controller: self) //Define the exercise Timers dropping time
+        saveChosenName()
+    }
+    
+    private func saveChosenName(){
+        guard nameLabel.text != "" && nameLabel.text != nil else{
+            return
+        }
+        SingleGameData.name = nameLabel.text!
+        AppManager.shared.userName = SingleGameData.name
     }
     
     @objc public func willAnimateRainDrop(timer: Timer){ //prepare for animation
@@ -89,7 +99,7 @@ class GameViewController: UIViewController {
         //Then create a vc based on that rainDrop
         let controllerId = UUID.init().uuidString //unique id
         goldenRainDropVcDict[controllerId] = RainDropVCFactory.generateRainDropVC(rainDrop: goldenRainDrop)
-        goldenRainDropVcDict[controllerId]?.imageView.image = UIImage(named: "SmallGoldenRainDropImage") // golden image
+        goldenRainDropVcDict[controllerId]?.imageView.image = UIImage(named: "SmallGoldenRainDropImage") //Golden
         goldenRainDropVcDict[controllerId]?.view.frame.origin.x = CGFloat(RandomFactory.generateNumberBetweenTwoValues(maxValue: Int(screenWidth) - 90, minValue: 90))
         goldenRainDropVcDict[controllerId]?.view.frame.origin.y = self.scoreLabel.frame.origin.y + 10
         AnimationsManager.shared.animateRainDrop(gameController: self, rainDrop: goldenRainDrop, rainDropVC: goldenRainDropVcDict[controllerId]!)
@@ -98,23 +108,15 @@ class GameViewController: UIViewController {
     let internalQueue: DispatchQueue = DispatchQueue(label:"LockingQueue")
     
     public func handleFallenRainDrop(rainDrop : RainDrop, controller : RainDropViewController){
-        
-        internalQueue.sync {
-            guard RainDrop.shouldHandle else{ //Guard: if condition is met do code below. else enter else (return)
-                return
-            }
-            cleanAllRainDropsFromScreen()
-            SingleGameData.lives -= 1
-            print("Rain dropped. Xcord: " + controller.view.frame.origin.x.description)
-            print("Lives remaining: " + (SingleGameData.lives.description))
-            guard SingleGameData.lives != 0 else{
-                RainDrop.shouldHandle = true
-                gameEnded()
-                return
-            }
-            createFadingPenaltyLabel(penaltyText: String(SingleGameData.lives) + " lives remain", fontSize : 30)
+        cleanAllRainDropsFromScreen()
+        SingleGameData.lives -= 1
+        print("Rain dropped. Xcord: " + controller.view.frame.origin.x.description)
+        print("Lives remaining: " + (SingleGameData.lives.description))
+        guard SingleGameData.lives != 0 else{
+            gameEnded()
+            return
         }
-        
+        createFadingPenaltyLabel(penaltyText: String(SingleGameData.lives) + " lives remain", fontSize : 30)
     }
     
     private func gameEnded(){
@@ -126,7 +128,7 @@ class GameViewController: UIViewController {
     }
     
     private func saveToFirebaseHighScore(scoreData: [String:Any], targetUser : String){
-        if(Int16(SingleGameData.score) > Scores.allScores[0].score){ //if game score is larger than highest score
+        if(Int16(SingleGameData.score) > Scores.allScores[0].score){ //if game score is higher than highest score
             FirebaseDBManager.shared.saveHighScore(score: scoreData, targetUser: targetUser) //save it to Firebase
             print("Highscore: " + scoreLabel.text!, " was saved to Firebase")
         }
@@ -225,8 +227,8 @@ class GameViewController: UIViewController {
     }
     
     private func createFadingPenaltyLabel(penaltyText: String, fontSize : Int){
-        let xCoor = RandomFactory.generateNumberBetweenTwoValues(maxValue: (Int(screenWidth) - 180), minValue: 180)
-        let yCoor = RandomFactory.generateNumberBetweenTwoValues(maxValue: (Int(screenHeight) - 180), minValue: 180)
+        let xCoor = RandomFactory.generateNumberBetweenTwoValues(maxValue: (Int(screenWidth) - 90), minValue: 90)
+        let yCoor = RandomFactory.generateNumberBetweenTwoValues(maxValue: (Int(screenHeight) - 90), minValue: 90)
         let paneltyLabel = UILabel(frame: CGRect(x: xCoor, y: yCoor, width: 500, height: 60))
         paneltyLabel.center = CGPoint(x: xCoor, y: yCoor)
         paneltyLabel.textAlignment = .center
@@ -242,7 +244,7 @@ class GameViewController: UIViewController {
         let alert = UIAlertController(title: "God job!", message: "Score: " + String(SingleGameData.score), preferredStyle: UIAlertControllerStyle.alert)
         
         // add the actions (buttons)
-        alert.addAction(UIAlertAction(title: "Start new game", style: UIAlertActionStyle.default, handler: {
+        alert.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.default, handler: {
             action in
             self.nullifyInGameData()
             TimersManager.shared.initTimers(controller: self)

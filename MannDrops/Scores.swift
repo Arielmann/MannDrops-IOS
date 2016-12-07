@@ -28,7 +28,7 @@ class Scores: NSManagedObject {
         }
         
         return [ //create the score dictionary with the values
-            Config.NAME: name ?? "Anonymous",
+            Config.NAME: name ?? "You",
             Config.SCORE: Int(score),
             Config.EXERCISES_SOLVED: Int(exercises_solved),
             Config.ERRORS: Int(errors),

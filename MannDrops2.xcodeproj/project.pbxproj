@@ -29,6 +29,7 @@
 		6D7B56071DC25BDA00855ADF /* DivideFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7B56061DC25BDA00855ADF /* DivideFactory.swift */; };
 		6D7B56091DC266D100855ADF /* ExercisesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7B56081DC266D100855ADF /* ExercisesDataModel.swift */; };
 		6D7B560B1DCA3B2100855ADF /* ExerciseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7B560A1DCA3B2100855ADF /* ExerciseType.swift */; };
+		6D8F54B31DF861E700BFC8C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D8F54B21DF861E700BFC8C0 /* Main.storyboard */; };
 		6D9E0BB31DEC6264002569C4 /* Firebase in Resources */ = {isa = PBXBuildFile; fileRef = 6D9E0BA31DEC6263002569C4 /* Firebase */; };
 		6D9E0BB41DEC6264002569C4 /* FirebaseAnalytics in Resources */ = {isa = PBXBuildFile; fileRef = 6D9E0BA41DEC6263002569C4 /* FirebaseAnalytics */; };
 		6D9E0BB51DEC6264002569C4 /* FirebaseCore in Resources */ = {isa = PBXBuildFile; fileRef = 6D9E0BA51DEC6263002569C4 /* FirebaseCore */; };
@@ -43,7 +44,6 @@
 		6D9E0BBE1DEC6264002569C4 /* SwiftEventBus in Resources */ = {isa = PBXBuildFile; fileRef = 6D9E0BB11DEC6264002569C4 /* SwiftEventBus */; };
 		6D9E0BBF1DEC6264002569C4 /* Target Support Files in Resources */ = {isa = PBXBuildFile; fileRef = 6D9E0BB21DEC6264002569C4 /* Target Support Files */; };
 		6DDCF50C1D9D6C0800DBAF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDCF50B1D9D6C0800DBAF71 /* AppDelegate.swift */; };
-		6DDCF5111D9D6C0800DBAF71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DDCF50F1D9D6C0800DBAF71 /* Main.storyboard */; };
 		6DDCF5131D9D6C0800DBAF71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DDCF5121D9D6C0800DBAF71 /* Assets.xcassets */; };
 		6DDCF5161D9D6C0800DBAF71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DDCF5141D9D6C0800DBAF71 /* LaunchScreen.storyboard */; };
 		6DE835031DABE81F0026D658 /* Scores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE835021DABE81F0026D658 /* Scores.swift */; };
@@ -96,6 +96,7 @@
 		6D7B56061DC25BDA00855ADF /* DivideFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivideFactory.swift; sourceTree = "<group>"; };
 		6D7B56081DC266D100855ADF /* ExercisesDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesDataModel.swift; sourceTree = "<group>"; };
 		6D7B560A1DCA3B2100855ADF /* ExerciseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseType.swift; sourceTree = "<group>"; };
+		6D8F54B21DF861E700BFC8C0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6D9E0BA31DEC6263002569C4 /* Firebase */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Firebase; path = ../MannDrops3/Pods/Firebase; sourceTree = "<group>"; };
 		6D9E0BA41DEC6263002569C4 /* FirebaseAnalytics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FirebaseAnalytics; path = ../MannDrops3/Pods/FirebaseAnalytics; sourceTree = "<group>"; };
 		6D9E0BA51DEC6263002569C4 /* FirebaseCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FirebaseCore; path = ../MannDrops3/Pods/FirebaseCore; sourceTree = "<group>"; };
@@ -112,7 +113,6 @@
 		6D9E0BB21DEC6264002569C4 /* Target Support Files */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Target Support Files"; path = "../MannDrops3/Pods/Target Support Files"; sourceTree = "<group>"; };
 		6DDCF5081D9D6C0800DBAF71 /* MannDrops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MannDrops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DDCF50B1D9D6C0800DBAF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6DDCF5101D9D6C0800DBAF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6DDCF5121D9D6C0800DBAF71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DDCF5151D9D6C0800DBAF71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DDCF5171D9D6C0800DBAF71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -272,11 +272,12 @@
 		6DDCF50A1D9D6C0800DBAF71 /* MannDrops */ = {
 			isa = PBXGroup;
 			children = (
+				6D02C9C11DDCA27C00AA5CB3 /* Animations */,
 				6DE835151DAFE5FD0026D658 /* AppManager.swift */,
 				6DDCF51E1D9D705C00DBAF71 /* Game */,
 				6DDCF51D1D9D703F00DBAF71 /* Scores */,
 				6DDCF50B1D9D6C0800DBAF71 /* AppDelegate.swift */,
-				6DDCF50F1D9D6C0800DBAF71 /* Main.storyboard */,
+				6D8F54B21DF861E700BFC8C0 /* Main.storyboard */,
 				6DDCF5121D9D6C0800DBAF71 /* Assets.xcassets */,
 				6DDCF5141D9D6C0800DBAF71 /* LaunchScreen.storyboard */,
 				6D5227C91DA6C7C6008BA765 /* GoogleService-Info.plist */,
@@ -299,7 +300,6 @@
 			children = (
 				6D2CC89F1DEEDAD300490649 /* Controllers */,
 				6D66806F1DEC614C00A148BB /* ExercisesTiming */,
-				6D02C9C11DDCA27C00AA5CB3 /* Animations */,
 				6D7B56031DC2482200855ADF /* ExercisesGeneration */,
 				6DDCF51F1D9D709000DBAF71 /* Model */,
 			);
@@ -432,7 +432,6 @@
 				6DDCF5131D9D6C0800DBAF71 /* Assets.xcassets in Resources */,
 				6D5227CA1DA6C7C6008BA765 /* GoogleService-Info.plist in Resources */,
 				6D9E0BBF1DEC6264002569C4 /* Target Support Files in Resources */,
-				6DDCF5111D9D6C0800DBAF71 /* Main.storyboard in Resources */,
 				6D9E0BBC1DEC6264002569C4 /* Local Podspecs in Resources */,
 				6D9E0BB91DEC6264002569C4 /* GoogleSymbolUtilities in Resources */,
 				069B1AA91DA544D50062D035 /* RainDropViewController.xib in Resources */,
@@ -440,6 +439,7 @@
 				6D9E0BBE1DEC6264002569C4 /* SwiftEventBus in Resources */,
 				6D9E0BB51DEC6264002569C4 /* FirebaseCore in Resources */,
 				6D9E0BB71DEC6264002569C4 /* FirebaseInstanceID in Resources */,
+				6D8F54B31DF861E700BFC8C0 /* Main.storyboard in Resources */,
 				6D011D2E1DDE33BB009BEF3B /* Sounds in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,14 +530,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6DDCF50F1D9D6C0800DBAF71 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6DDCF5101D9D6C0800DBAF71 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6DDCF5141D9D6C0800DBAF71 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

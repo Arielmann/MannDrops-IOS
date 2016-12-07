@@ -9,7 +9,6 @@ class RainDrop {
     var exercise : String! = ""
     var answer : String! = ""
     var droppingTime : Double = 10 //Default dropping time is 10 secods
-    static var shouldHandle : Bool = true
     
     init(exercise : String){
         let answer = AnswersManager.shared.generateAnswer(exercise: exercise)

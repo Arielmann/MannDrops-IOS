@@ -10,33 +10,33 @@ import UIKit
 
 class WorldScoresViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loadingLabel: UILabel!
     private var dataSet : [[String:Any]] = [[:]]
-    
-    override func viewWillAppear(_ animated: Bool) {
-        FirebaseDBManager.shared.readAllScores(){(arr : [[String:Any]]) in
-            self.dataSet = arr
-            self.tableView.reloadData()
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundView = UIImageView(image: UIImage(named: "ocean_bg"))
-        tableView.separatorStyle = .none
-       
+        AnimationsManager.shared.changeLabelTextAsync(label: loadingLabel, index: 0)
+        FirebaseDBManager.shared.readAllScores(){(arr : [[String:Any]]) in //load scores
+            self.dataSet = arr
+            self.tableView.reloadData()
+            self.loadingLabel.alpha = 0
+            self.tableView.alpha = 1
+            self.tableView.backgroundView = UIImageView(image: UIImage(named: "ocean_bg"))
+            self.tableView.separatorStyle = .none
+        }
     }
     
     // MARK: - Table view data source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSet.count
+        return self.dataSet.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = ScoreCellTableViewCell.identifier
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! ScoreCellTableViewCell
-        cell.configFromDict(dataSet[indexPath.row])
+        cell.configFromDict(self.dataSet[indexPath.row])
         cell.backgroundColor = UIColor.clear
         cell.backgroundView?.backgroundColor = UIColor.clear
         return cell
@@ -52,5 +52,5 @@ class WorldScoresViewController: UIViewController, UITableViewDataSource, UITabl
      // Pass the selected object to the new view controller.
      }
      */
-    
 }
+
