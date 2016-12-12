@@ -56,10 +56,7 @@ class AnimationsManager: NSObject {
                 labelText = strings[index]
                 DispatchQueue.main.async {
                     label.text = labelText
-                    innerIndex += 1
-                    if(innerIndex > 3){
-                        innerIndex = 0
-                    }
+                    innerIndex = innerIndex == 3 ? 0 : innerIndex + 1
                     self.changeLabelTextAsync(label: label, index: innerIndex)
                 }
             }

@@ -12,7 +12,7 @@ class RainDropViewController: UIViewController {
     
     @IBOutlet weak var exerciseLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-    var rainDrop: RainDrop! = RainDrop(exercise : "0 + 0") //TODO: doesn't not need to be initialized here. fix init()
+    var rainDrop: RainDrop! = RainDrop(exercise : "0 + 0") //TODO: shouldn't be initialized here. fix init()
     
     init(rainDrop: RainDrop){
         super.init(nibName: nil, bundle: nil)

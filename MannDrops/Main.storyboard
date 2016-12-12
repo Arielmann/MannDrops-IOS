@@ -49,6 +49,31 @@
                                     <action selector="addNumberToResultLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MeI-Lv-Fuj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wIy-qA-QTN" userLabel="2">
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="2">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="23" name="MarkerFelt-Thin"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addNumberToResultLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nmc-iT-AGr"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kSG-6B-XYV">
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
@@ -247,10 +272,10 @@
                                 <color key="textColor" red="0.090218175793238209" green="0.37168774782307412" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0b-fM-PfC" userLabel="Falling Line">
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                </accessibility>
+                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v0b-fM-PfC" userLabel="Falling Line - NO CONSTRAINS, LOCATION MODIFIED IN RUNTIME">
+                                <frame key="frameInset" minX="1" minY="509" width="375" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.15923816120669609" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaB-RH-aiy">
                                 <color key="backgroundColor" red="0.95964103937149048" green="0.91839712858200073" blue="0.78526479005813599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -298,8 +323,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="line" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9I9-Yl-fd1" userLabel="Name Text Field">
-                                <accessibility key="accessibilityConfiguration" hint="Name"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" allowsEditingTextAttributes="YES" borderStyle="line" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9I9-Yl-fd1" userLabel="Name Text Field">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="134" id="YAt-g8-eS4"/>
                                     <constraint firstAttribute="height" constant="30" id="t1V-ni-Dlh"/>
@@ -424,41 +448,15 @@
                                     <segue destination="ga8-eB-gYb" kind="show" id="1wa-oe-VPA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZxH-6F-aWI">
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
-                                </accessibility>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="2">
-                                            <attributes>
-                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="23" name="MarkerFelt-Thin"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="addNumberToResultLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dh6-C5-rXP"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="kSG-6B-XYV" firstAttribute="centerY" secondItem="wIy-qA-QTN" secondAttribute="centerY" id="02H-gW-a7z"/>
                             <constraint firstAttribute="bottom" secondItem="fz9-EW-QRg" secondAttribute="bottom" id="1DU-XT-Hw9"/>
-                            <constraint firstItem="kSG-6B-XYV" firstAttribute="centerY" secondItem="ZxH-6F-aWI" secondAttribute="centerY" id="2iG-tR-CDM"/>
                             <constraint firstItem="9I9-Yl-fd1" firstAttribute="top" secondItem="gnM-fQ-jWh" secondAttribute="bottom" constant="44" id="2uh-cD-rSY"/>
                             <constraint firstItem="xIR-Cc-pgz" firstAttribute="top" secondItem="D8c-1D-qCo" secondAttribute="bottom" constant="-119" id="2vu-2B-aTE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ymp-tt-rOG" secondAttribute="trailing" multiplier="21:12" id="4j9-XN-WEU"/>
                             <constraint firstItem="qTo-n4-FXr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="5Em-D1-xfU"/>
-                            <constraint firstItem="v0b-fM-PfC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="492.5" id="64h-a8-BzM"/>
                             <constraint firstItem="fz9-EW-QRg" firstAttribute="top" secondItem="eaB-RH-aiy" secondAttribute="bottom" id="6ag-NO-5qa"/>
                             <constraint firstItem="eaB-RH-aiy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="7pM-vA-RJQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Vgj-zy-XdU" secondAttribute="trailing" multiplier="21:16" id="80p-D0-16u"/>
@@ -468,12 +466,9 @@
                             <constraint firstItem="3wJ-Es-fPR" firstAttribute="centerY" secondItem="ymp-tt-rOG" secondAttribute="centerY" id="CaP-p9-6tD"/>
                             <constraint firstItem="tQb-fb-ubl" firstAttribute="width" secondItem="PEg-ko-bz9" secondAttribute="width" id="D7t-yk-nfN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tQb-fb-ubl" secondAttribute="trailing" constant="45" id="Dt3-uS-efE"/>
-                            <constraint firstAttribute="trailing" secondItem="v0b-fM-PfC" secondAttribute="trailing" constant="-1" id="E9f-JE-gBI"/>
                             <constraint firstItem="szj-4h-cDm" firstAttribute="top" secondItem="h6D-wY-bfV" secondAttribute="bottom" id="FkV-7R-bmR"/>
-                            <constraint firstItem="ZxH-6F-aWI" firstAttribute="centerY" secondItem="oHC-us-ELx" secondAttribute="centerY" id="Glq-2F-yI8"/>
                             <constraint firstItem="ugd-FE-OCx" firstAttribute="centerY" secondItem="szj-4h-cDm" secondAttribute="centerY" id="IRd-nZ-JQ1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3wJ-Es-fPR" secondAttribute="trailing" multiplier="21:14" id="NbS-dF-22G"/>
-                            <constraint firstItem="v0b-fM-PfC" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="OBp-gy-tHd"/>
                             <constraint firstAttribute="trailing" secondItem="fz9-EW-QRg" secondAttribute="trailing" id="Oli-z0-0i8"/>
                             <constraint firstItem="szj-4h-cDm" firstAttribute="centerY" secondItem="Vgj-zy-XdU" secondAttribute="centerY" id="PEd-R9-kGd"/>
                             <constraint firstItem="gnM-fQ-jWh" firstAttribute="centerX" secondItem="fz9-EW-QRg" secondAttribute="centerX" constant="4" id="PKe-zv-hlP"/>
@@ -481,7 +476,6 @@
                             <constraint firstItem="Vgj-zy-XdU" firstAttribute="centerY" secondItem="3wJ-Es-fPR" secondAttribute="centerY" id="RnT-G8-zJ9"/>
                             <constraint firstItem="eaB-RH-aiy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SdT-JA-9Hp"/>
                             <constraint firstItem="9I9-Yl-fd1" firstAttribute="centerX" secondItem="fz9-EW-QRg" secondAttribute="centerX" id="U22-nP-Jgv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZxH-6F-aWI" secondAttribute="trailing" multiplier="21 : 4" id="V2T-NJ-yYz"/>
                             <constraint firstItem="DJ4-4g-hkp" firstAttribute="centerY" secondItem="hEu-2a-u8r" secondAttribute="centerY" id="VC0-E9-aZ8"/>
                             <constraint firstItem="D8c-1D-qCo" firstAttribute="centerX" secondItem="9I9-Yl-fd1" secondAttribute="centerX" constant="2.5" id="VUH-pu-L6m"/>
                             <constraint firstItem="PEg-ko-bz9" firstAttribute="height" secondItem="D8c-1D-qCo" secondAttribute="height" id="ZN2-dz-THG"/>
@@ -498,6 +492,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ugd-FE-OCx" secondAttribute="trailing" multiplier="21:20" id="i6W-Av-WFp"/>
                             <constraint firstItem="PS0-sH-cwb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="iUv-Fy-UJI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PEg-ko-bz9" secondAttribute="trailing" constant="45" id="jCL-LY-NCj"/>
+                            <constraint firstItem="wIy-qA-QTN" firstAttribute="centerY" secondItem="oHC-us-ELx" secondAttribute="centerY" id="kma-1c-pyR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="h6D-wY-bfV" secondAttribute="trailing" constant="46" id="ncZ-1d-XCK"/>
                             <constraint firstItem="kSG-6B-XYV" firstAttribute="top" secondItem="qTo-n4-FXr" secondAttribute="bottom" id="oiV-09-ntF"/>
                             <constraint firstItem="PS0-sH-cwb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="qCA-kz-m2s"/>
@@ -506,8 +501,8 @@
                             <constraint firstItem="D8c-1D-qCo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="192" id="rLd-cN-lQE"/>
                             <constraint firstAttribute="trailing" secondItem="PS0-sH-cwb" secondAttribute="trailing" id="rdw-e2-Fye"/>
                             <constraint firstItem="fz9-EW-QRg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="u35-vm-FJv"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="v0b-fM-PfC" secondAttribute="bottom" constant="153.5" id="uKs-ws-hej"/>
                             <constraint firstItem="tQb-fb-ubl" firstAttribute="top" secondItem="PEg-ko-bz9" secondAttribute="bottom" constant="17" id="xUR-fc-Cgw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wIy-qA-QTN" secondAttribute="trailing" multiplier="21 : 4" id="yte-HB-RUD"/>
                         </constraints>
                     </view>
                     <connections>
@@ -539,12 +534,12 @@
                         <outletCollection property="allMenuButtons" destination="D8c-1D-qCo" collectionClass="NSMutableArray" id="0vK-Oq-ps0"/>
                         <outletCollection property="allMenuButtons" destination="tQb-fb-ubl" collectionClass="NSMutableArray" id="Ra0-YT-SWv"/>
                         <outletCollection property="allMenuViews" destination="tQb-fb-ubl" collectionClass="NSMutableArray" id="ehf-Wt-ZW6"/>
-                        <outletCollection property="allGameButtons" destination="ZxH-6F-aWI" collectionClass="NSMutableArray" id="vcQ-BU-vbS"/>
+                        <outletCollection property="allGameButtons" destination="wIy-qA-QTN" collectionClass="NSMutableArray" id="9Pe-h9-Dqf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="347.82608695652175" y="61.956521739130437"/>
+            <point key="canvasLocation" x="348" y="62.518740629685162"/>
         </scene>
         <!--ScoreTableViewController-->
         <scene sceneID="gTO-7B-xbh">
@@ -559,67 +554,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ocean_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Tlx-BU-wb0"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghg-D5-wZK" userLabel="Exercises Solved Column Label">
-                                <attributedString key="attributedText">
-                                    <fragment content="Solved">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghg-D5-wZK" userLabel="Exercises Solved Column Label">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usW-60-Taj" userLabel="Errors Column Label">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="51" id="LEz-o3-0hk"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Errors">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Errors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usW-60-Taj" userLabel="Errors Column Label">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AM-k1-pIQ" userLabel="Name Column Label">
-                                <attributedString key="attributedText">
-                                    <fragment content="Name">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8AM-k1-pIQ" userLabel="Name Column Label">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMq-Um-ej9" userLabel="Score Column Label">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="59" id="VyA-qI-Izy"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Score">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMq-Um-ej9" userLabel="Score Column Label">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLC-aj-xvt" userLabel="Date Column Label">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="41" id="QAg-Rc-y0w"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Date">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLC-aj-xvt" userLabel="Date Column Label">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fJ-pq-v0s" userLabel="Name Column Border">
@@ -697,7 +654,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ne-eJ-OTO" userLabel="Name Label">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ariel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ne-eJ-OTO" userLabel="Name Label">
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -796,8 +753,8 @@
                             <constraint firstItem="Tlx-BU-wb0" firstAttribute="top" secondItem="68N-eQ-7Rv" secondAttribute="top" id="s2I-ZR-VxU"/>
                             <constraint firstItem="hSQ-YE-BO7" firstAttribute="top" secondItem="DDf-I2-nYb" secondAttribute="bottom" constant="-1" id="sfx-qG-cEu"/>
                             <constraint firstItem="DDf-I2-nYb" firstAttribute="top" secondItem="mMq-Um-ej9" secondAttribute="bottom" constant="-6" id="w07-pe-6U2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NLC-aj-xvt" secondAttribute="trailing" multiplier="19:18.5" constant="-10.648648648648646" id="x4n-fe-TQF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mMq-Um-ej9" secondAttribute="trailing" multiplier="19:7.5" constant="-1.1999999999999886" id="zdp-JE-64D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NLC-aj-xvt" secondAttribute="trailing" multiplier="19:18.5" id="x4n-fe-TQF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mMq-Um-ej9" secondAttribute="trailing" multiplier="19:7.5" id="zdp-JE-64D"/>
                         </constraints>
                     </view>
                     <connections>
@@ -806,7 +763,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jh1-m9-oLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1086.9565217391305" y="169.56521739130437"/>
+            <point key="canvasLocation" x="1088.8" y="169.56521739130437"/>
         </scene>
         <!--WorldScoreTableViewController-->
         <scene sceneID="B7A-7k-WZz">
@@ -821,59 +778,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ocean_bg" translatesAutoresizingMaskIntoConstraints="NO" id="GO9-gg-HTI"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYS-Lw-1f3" userLabel="Exercises Solved Column Label">
-                                <attributedString key="attributedText">
-                                    <fragment content="Solved">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYS-Lw-1f3" userLabel="Exercises Solved Column Label">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZJ-S3-KAM" userLabel="Errors Column Label">
-                                <attributedString key="attributedText">
-                                    <fragment content="Errors">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Errors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZJ-S3-KAM" userLabel="Errors Column Label">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2e9-lc-odj" userLabel="Name Column Label">
-                                <attributedString key="attributedText">
-                                    <fragment content="Name">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2e9-lc-odj" userLabel="Name Column Label">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wH-xl-EeY" userLabel="Score Column Label">
-                                <attributedString key="attributedText">
-                                    <fragment content="Score">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wH-xl-EeY" userLabel="Score Column Label">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYO-P4-gw0" userLabel="Date Column Label">
-                                <attributedString key="attributedText">
-                                    <fragment content="Date">
-                                        <attributes>
-                                            <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYO-P4-gw0" userLabel="Date Column Label">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8E4-MJ-B1e" userLabel="Name Column Border">
@@ -883,6 +810,17 @@
                                     <constraint firstAttribute="width" constant="1" id="M0v-Xf-JUM"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHJ-YO-gP2" userLabel="Loading label">
+                                <attributedString key="attributedText">
+                                    <fragment content="Loading">
+                                        <attributes>
+                                            <font key="NSFont" size="46" name="MarkerFelt-Thin"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ar6-SU-HLm" userLabel="Columns Buttom Border">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -951,7 +889,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdO-WY-KVN" userLabel="Name Label">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ariel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdO-WY-KVN" userLabel="Name Label">
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1007,17 +945,6 @@
                                     <outlet property="delegate" destination="ga8-eB-gYb" id="G5q-ua-Nef"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifw-Xh-CVw">
-                                <attributedString key="attributedText">
-                                    <fragment content="Loading">
-                                        <attributes>
-                                            <font key="NSFont" size="46" name="MarkerFelt-Thin"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Trr-AB-1NI">
                                 <color key="backgroundColor" red="1" green="0.75487036669999996" blue="0.40877855460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
@@ -1036,11 +963,13 @@
                             <constraint firstItem="8E4-MJ-B1e" firstAttribute="leading" secondItem="2e9-lc-odj" secondAttribute="trailing" id="053-Vb-fNQ"/>
                             <constraint firstItem="ar6-SU-HLm" firstAttribute="top" secondItem="1wH-xl-EeY" secondAttribute="bottom" constant="-6" id="1CC-S6-ijb"/>
                             <constraint firstItem="8E4-MJ-B1e" firstAttribute="height" secondItem="Trr-AB-1NI" secondAttribute="height" id="1er-ml-IXx"/>
+                            <constraint firstItem="qHJ-YO-gP2" firstAttribute="centerX" secondItem="sZ4-7V-B1Z" secondAttribute="centerX" id="5I0-PH-Tbb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HZJ-S3-KAM" secondAttribute="trailing" multiplier="19:15.5" id="93C-bV-pAA"/>
                             <constraint firstItem="8E4-MJ-B1e" firstAttribute="top" secondItem="Trr-AB-1NI" secondAttribute="bottom" constant="-13" id="9YU-rz-HxG"/>
                             <constraint firstItem="v8b-nw-Q8v" firstAttribute="top" secondItem="2e9-lc-odj" secondAttribute="bottom" constant="-1" id="Aed-ci-f9Q"/>
                             <constraint firstItem="ar6-SU-HLm" firstAttribute="top" secondItem="mYS-Lw-1f3" secondAttribute="bottom" constant="-4" id="AgL-bj-uBi"/>
                             <constraint firstItem="FYO-P4-gw0" firstAttribute="centerY" secondItem="2e9-lc-odj" secondAttribute="centerY" id="CWL-nr-d5D"/>
+                            <constraint firstItem="qHJ-YO-gP2" firstAttribute="width" secondItem="sZ4-7V-B1Z" secondAttribute="width" id="Cdh-Zn-gh6"/>
                             <constraint firstItem="mYS-Lw-1f3" firstAttribute="centerY" secondItem="2e9-lc-odj" secondAttribute="centerY" id="IEJ-Nf-ytk"/>
                             <constraint firstItem="znW-hV-m6Y" firstAttribute="top" secondItem="GO9-gg-HTI" secondAttribute="bottom" id="KDV-qh-8GS"/>
                             <constraint firstItem="v8b-nw-Q8v" firstAttribute="top" secondItem="Trr-AB-1NI" secondAttribute="bottom" constant="20" id="NHf-Ha-DWP"/>
@@ -1048,6 +977,7 @@
                             <constraint firstItem="v8b-nw-Q8v" firstAttribute="top" secondItem="ar6-SU-HLm" secondAttribute="bottom" constant="-1" id="R2c-Sw-HTb"/>
                             <constraint firstItem="GO9-gg-HTI" firstAttribute="top" secondItem="Trr-AB-1NI" secondAttribute="bottom" constant="-72" id="RG8-J7-gVT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8E4-MJ-B1e" secondAttribute="trailing" multiplier="19:4" id="Ri8-Vc-BJ6"/>
+                            <constraint firstItem="qHJ-YO-gP2" firstAttribute="centerY" secondItem="sZ4-7V-B1Z" secondAttribute="centerY" id="S3Y-SK-sIX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mYS-Lw-1f3" secondAttribute="trailing" multiplier="19:11.5" id="S9y-HM-PlU"/>
                             <constraint firstAttribute="trailing" secondItem="v8b-nw-Q8v" secondAttribute="trailing" id="Zno-Km-uyh"/>
                             <constraint firstItem="GO9-gg-HTI" firstAttribute="top" secondItem="sZ4-7V-B1Z" secondAttribute="top" id="be4-YY-HTE"/>
@@ -1057,30 +987,28 @@
                             <constraint firstItem="znW-hV-m6Y" firstAttribute="top" secondItem="v8b-nw-Q8v" secondAttribute="bottom" constant="-5" id="jTf-Wm-Cfr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1wH-xl-EeY" secondAttribute="trailing" multiplier="19:7.5" id="k1O-OU-Ekf"/>
                             <constraint firstItem="v8b-nw-Q8v" firstAttribute="leading" secondItem="sZ4-7V-B1Z" secondAttribute="leading" id="kNU-hR-3n1"/>
-                            <constraint firstItem="ifw-Xh-CVw" firstAttribute="centerY" secondItem="sZ4-7V-B1Z" secondAttribute="centerY" id="nzD-la-sJm"/>
                             <constraint firstAttribute="trailing" secondItem="Trr-AB-1NI" secondAttribute="trailing" id="oOX-Pi-hGC"/>
                             <constraint firstItem="Trr-AB-1NI" firstAttribute="leading" secondItem="sZ4-7V-B1Z" secondAttribute="leading" id="rbU-d5-UpA"/>
                             <constraint firstItem="GO9-gg-HTI" firstAttribute="leading" secondItem="sZ4-7V-B1Z" secondAttribute="leading" id="uOh-A8-FIf"/>
                             <constraint firstItem="1wH-xl-EeY" firstAttribute="centerY" secondItem="2e9-lc-odj" secondAttribute="centerY" id="v4z-Vs-i5o"/>
                             <constraint firstItem="HZJ-S3-KAM" firstAttribute="centerY" secondItem="2e9-lc-odj" secondAttribute="centerY" id="vyh-GN-zuL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FYO-P4-gw0" secondAttribute="trailing" multiplier="19:18.5" id="wrC-ae-Xd8"/>
-                            <constraint firstItem="ifw-Xh-CVw" firstAttribute="centerX" secondItem="sZ4-7V-B1Z" secondAttribute="centerX" id="y9l-c6-Fvd"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loadingLabel" destination="ifw-Xh-CVw" id="39o-j3-2wf"/>
+                        <outlet property="loadingLabel" destination="qHJ-YO-gP2" id="F0a-HI-ESO"/>
                         <outlet property="tableView" destination="v8b-nw-Q8v" id="UfF-rO-7BN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVN-cg-TpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1132" y="-527"/>
+            <point key="canvasLocation" x="1132" y="-527.58620689655174"/>
         </scene>
     </scenes>
     <resources>
         <image name="ocean_bg" width="500" height="426"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="b0k-Sn-hj1"/>
+        <segue reference="WMk-xF-dLh"/>
     </inferredMetricsTieBreakers>
 </document>

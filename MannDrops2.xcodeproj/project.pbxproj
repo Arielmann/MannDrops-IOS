@@ -17,12 +17,24 @@
 		6D011D301DE30E40009BEF3B /* LocalScoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D011D2F1DE30E40009BEF3B /* LocalScoresTableViewController.swift */; };
 		6D011D321DE30F32009BEF3B /* ScoreCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D011D311DE30F32009BEF3B /* ScoreCellTableViewCell.swift */; };
 		6D02C9C31DDCA29800AA5CB3 /* AnimationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D02C9C21DDCA29800AA5CB3 /* AnimationsManager.swift */; };
+		6D09B8211DFF27F60050A15B /* Firebase in Resources */ = {isa = PBXBuildFile; fileRef = 6D09B8111DFF27F60050A15B /* Firebase */; };
+		6D09B8221DFF27F60050A15B /* FirebaseAnalytics in Resources */ = {isa = PBXBuildFile; fileRef = 6D09B8121DFF27F60050A15B /* FirebaseAnalytics */; };
+		6D09B8231DFF27F60050A15B /* FirebaseCore in Resources */ = {isa = PBXBuildFile; fileRef = 6D09B8131DFF27F60050A15B /* FirebaseCore */; };
+		6D09B8241DFF27F60050A15B /* FirebaseDatabase in Resources */ = {isa = PBXBuildFile; fileRef = 6D09B8141DFF27F60050A15B /* FirebaseDatabase */; };
+		6D09B8251DFF27F60050A15B /* FirebaseInstanceID in Resources */ = {isa = PBXBuildFile; fileRef = 6D09B8151DFF27F60050A15B /* FirebaseInstanceID */; };
+		6D09B8261DFF27F60050A15B /* GoogleInterchangeUtilities in Resources */ = {isa = PBXBuildFile; fileRef = 6D09B8161DFF27F60050A15B /* GoogleInterchangeUtilities */; };
+		6D09B8271DFF27F60050A15B /* GoogleSymbolUtilities in Resources */ = {isa = PBXBuildFile; fileRef = 6D09B8171DFF27F60050A15B /* GoogleSymbolUtilities */; };
+		6D09B8281DFF27F60050A15B /* GoogleUtilities in Resources */ = {isa = PBXBuildFile; fileRef = 6D09B8181DFF27F60050A15B /* GoogleUtilities */; };
+		6D09B8291DFF27F60050A15B /* Headers in Resources */ = {isa = PBXBuildFile; fileRef = 6D09B8191DFF27F60050A15B /* Headers */; };
+		6D09B82A1DFF27F60050A15B /* Local Podspecs in Resources */ = {isa = PBXBuildFile; fileRef = 6D09B81A1DFF27F60050A15B /* Local Podspecs */; };
+		6D09B82B1DFF27F60050A15B /* Manifest.lock in Resources */ = {isa = PBXBuildFile; fileRef = 6D09B81B1DFF27F60050A15B /* Manifest.lock */; };
+		6D09B82C1DFF27F60050A15B /* SwiftEventBus in Resources */ = {isa = PBXBuildFile; fileRef = 6D09B81F1DFF27F60050A15B /* SwiftEventBus */; };
+		6D09B82D1DFF27F60050A15B /* Target Support Files in Resources */ = {isa = PBXBuildFile; fileRef = 6D09B8201DFF27F60050A15B /* Target Support Files */; };
 		6D2CC8AD1DEF131A00490649 /* WorldScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2CC8AC1DEF131A00490649 /* WorldScoresViewController.swift */; };
 		6D2CC8AF1DEF277600490649 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2CC8AE1DEF277600490649 /* Config.swift */; };
 		6D5227C81DA6A19D008BA765 /* ScoresDBModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D5227C61DA6A19D008BA765 /* ScoresDBModel.xcdatamodeld */; };
 		6D5227CA1DA6C7C6008BA765 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6D5227C91DA6C7C6008BA765 /* GoogleService-Info.plist */; };
 		6D5227CC1DABD78C008BA765 /* ExerciseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5227CB1DABD78C008BA765 /* ExerciseFactory.swift */; };
-		6D66806E1DEC610000A148BB /* SingleGameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D66806D1DEC610000A148BB /* SingleGameData.swift */; };
 		6D6FC8361DD9D65100811E98 /* RainDropFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FC8351DD9D65100811E98 /* RainDropFactory.swift */; };
 		6D6FC8381DD9D6E600811E98 /* RainDropVCFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FC8371DD9D6E600811E98 /* RainDropVCFactory.swift */; };
 		6D6FC83A1DD9F56100811E98 /* RandomFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FC8391DD9F56100811E98 /* RandomFactory.swift */; };
@@ -30,19 +42,7 @@
 		6D7B56091DC266D100855ADF /* ExercisesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7B56081DC266D100855ADF /* ExercisesDataModel.swift */; };
 		6D7B560B1DCA3B2100855ADF /* ExerciseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7B560A1DCA3B2100855ADF /* ExerciseType.swift */; };
 		6D8F54B31DF861E700BFC8C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D8F54B21DF861E700BFC8C0 /* Main.storyboard */; };
-		6D9E0BB31DEC6264002569C4 /* Firebase in Resources */ = {isa = PBXBuildFile; fileRef = 6D9E0BA31DEC6263002569C4 /* Firebase */; };
-		6D9E0BB41DEC6264002569C4 /* FirebaseAnalytics in Resources */ = {isa = PBXBuildFile; fileRef = 6D9E0BA41DEC6263002569C4 /* FirebaseAnalytics */; };
-		6D9E0BB51DEC6264002569C4 /* FirebaseCore in Resources */ = {isa = PBXBuildFile; fileRef = 6D9E0BA51DEC6263002569C4 /* FirebaseCore */; };
-		6D9E0BB61DEC6264002569C4 /* FirebaseDatabase in Resources */ = {isa = PBXBuildFile; fileRef = 6D9E0BA61DEC6263002569C4 /* FirebaseDatabase */; };
-		6D9E0BB71DEC6264002569C4 /* FirebaseInstanceID in Resources */ = {isa = PBXBuildFile; fileRef = 6D9E0BA71DEC6263002569C4 /* FirebaseInstanceID */; };
-		6D9E0BB81DEC6264002569C4 /* GoogleInterchangeUtilities in Resources */ = {isa = PBXBuildFile; fileRef = 6D9E0BA81DEC6263002569C4 /* GoogleInterchangeUtilities */; };
-		6D9E0BB91DEC6264002569C4 /* GoogleSymbolUtilities in Resources */ = {isa = PBXBuildFile; fileRef = 6D9E0BA91DEC6263002569C4 /* GoogleSymbolUtilities */; };
-		6D9E0BBA1DEC6264002569C4 /* GoogleUtilities in Resources */ = {isa = PBXBuildFile; fileRef = 6D9E0BAA1DEC6263002569C4 /* GoogleUtilities */; };
-		6D9E0BBB1DEC6264002569C4 /* Headers in Resources */ = {isa = PBXBuildFile; fileRef = 6D9E0BAB1DEC6263002569C4 /* Headers */; };
-		6D9E0BBC1DEC6264002569C4 /* Local Podspecs in Resources */ = {isa = PBXBuildFile; fileRef = 6D9E0BAC1DEC6263002569C4 /* Local Podspecs */; };
-		6D9E0BBD1DEC6264002569C4 /* Manifest.lock in Resources */ = {isa = PBXBuildFile; fileRef = 6D9E0BAD1DEC6264002569C4 /* Manifest.lock */; };
-		6D9E0BBE1DEC6264002569C4 /* SwiftEventBus in Resources */ = {isa = PBXBuildFile; fileRef = 6D9E0BB11DEC6264002569C4 /* SwiftEventBus */; };
-		6D9E0BBF1DEC6264002569C4 /* Target Support Files in Resources */ = {isa = PBXBuildFile; fileRef = 6D9E0BB21DEC6264002569C4 /* Target Support Files */; };
+		6D8F54E81DFF033600BFC8C0 /* SingleGameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8F54E71DFF033600BFC8C0 /* SingleGameData.swift */; };
 		6DDCF50C1D9D6C0800DBAF71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDCF50B1D9D6C0800DBAF71 /* AppDelegate.swift */; };
 		6DDCF5131D9D6C0800DBAF71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DDCF5121D9D6C0800DBAF71 /* Assets.xcassets */; };
 		6DDCF5161D9D6C0800DBAF71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DDCF5141D9D6C0800DBAF71 /* LaunchScreen.storyboard */; };
@@ -55,16 +55,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6D9E0BC21DEC6264002569C4 /* PBXContainerItemProxy */ = {
+		6D09B8301DFF27F60050A15B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6D9E0BAE1DEC6264002569C4 /* Pods.xcodeproj */;
+			containerPortal = 6D09B81C1DFF27F60050A15B /* Pods.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ECA91FD589F635BCDE9179CBAF5432A2;
 			remoteInfo = "Pods-MannDrops";
 		};
-		6D9E0BC41DEC6264002569C4 /* PBXContainerItemProxy */ = {
+		6D09B8321DFF27F60050A15B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6D9E0BAE1DEC6264002569C4 /* Pods.xcodeproj */;
+			containerPortal = 6D09B81C1DFF27F60050A15B /* Pods.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 4F461AA2CB0A316D652AB9766F626155;
 			remoteInfo = SwiftEventBus;
@@ -79,17 +79,29 @@
 		28B36E35A298620F73992607 /* AnswersManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswersManager.swift; sourceTree = "<group>"; };
 		28B36EC3C6C32BBEDA3B69BC /* RainDrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainDrop.swift; sourceTree = "<group>"; };
 		604BD9BB71838AC0E6EBD914 /* Pods_MannDrops.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MannDrops.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		63FB5DDBF8F88644AD27EDCF /* Pods-MannDrops.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MannDrops.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MannDrops/Pods-MannDrops.debug.xcconfig"; sourceTree = "<group>"; };
 		6D011D2D1DDE33BB009BEF3B /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sounds; path = MannDrops/Sounds; sourceTree = "<group>"; };
 		6D011D2F1DE30E40009BEF3B /* LocalScoresTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalScoresTableViewController.swift; sourceTree = "<group>"; };
 		6D011D311DE30F32009BEF3B /* ScoreCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCellTableViewCell.swift; sourceTree = "<group>"; };
 		6D02C9C21DDCA29800AA5CB3 /* AnimationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationsManager.swift; sourceTree = "<group>"; };
+		6D09B8111DFF27F60050A15B /* Firebase */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Firebase; path = Pods/Firebase; sourceTree = "<group>"; };
+		6D09B8121DFF27F60050A15B /* FirebaseAnalytics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FirebaseAnalytics; path = Pods/FirebaseAnalytics; sourceTree = "<group>"; };
+		6D09B8131DFF27F60050A15B /* FirebaseCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FirebaseCore; path = Pods/FirebaseCore; sourceTree = "<group>"; };
+		6D09B8141DFF27F60050A15B /* FirebaseDatabase */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FirebaseDatabase; path = Pods/FirebaseDatabase; sourceTree = "<group>"; };
+		6D09B8151DFF27F60050A15B /* FirebaseInstanceID */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FirebaseInstanceID; path = Pods/FirebaseInstanceID; sourceTree = "<group>"; };
+		6D09B8161DFF27F60050A15B /* GoogleInterchangeUtilities */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GoogleInterchangeUtilities; path = Pods/GoogleInterchangeUtilities; sourceTree = "<group>"; };
+		6D09B8171DFF27F60050A15B /* GoogleSymbolUtilities */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GoogleSymbolUtilities; path = Pods/GoogleSymbolUtilities; sourceTree = "<group>"; };
+		6D09B8181DFF27F60050A15B /* GoogleUtilities */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GoogleUtilities; path = Pods/GoogleUtilities; sourceTree = "<group>"; };
+		6D09B8191DFF27F60050A15B /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Headers; path = Pods/Headers; sourceTree = "<group>"; };
+		6D09B81A1DFF27F60050A15B /* Local Podspecs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Local Podspecs"; path = "Pods/Local Podspecs"; sourceTree = "<group>"; };
+		6D09B81B1DFF27F60050A15B /* Manifest.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Manifest.lock; path = Pods/Manifest.lock; sourceTree = "<group>"; };
+		6D09B81C1DFF27F60050A15B /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
+		6D09B81F1DFF27F60050A15B /* SwiftEventBus */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftEventBus; path = Pods/SwiftEventBus; sourceTree = "<group>"; };
+		6D09B8201DFF27F60050A15B /* Target Support Files */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Target Support Files"; path = "Pods/Target Support Files"; sourceTree = "<group>"; };
 		6D2CC8AC1DEF131A00490649 /* WorldScoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldScoresViewController.swift; sourceTree = "<group>"; };
 		6D2CC8AE1DEF277600490649 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		6D5227C71DA6A19D008BA765 /* ScoresDBModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScoresDBModel.xcdatamodel; sourceTree = "<group>"; };
 		6D5227C91DA6C7C6008BA765 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		6D5227CB1DABD78C008BA765 /* ExerciseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseFactory.swift; sourceTree = "<group>"; };
-		6D66806D1DEC610000A148BB /* SingleGameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingleGameData.swift; path = ../../MannDrops3/MannDrops/SingleGameData.swift; sourceTree = "<group>"; };
 		6D6FC8351DD9D65100811E98 /* RainDropFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainDropFactory.swift; sourceTree = "<group>"; };
 		6D6FC8371DD9D6E600811E98 /* RainDropVCFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RainDropVCFactory.swift; sourceTree = "<group>"; };
 		6D6FC8391DD9F56100811E98 /* RandomFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomFactory.swift; sourceTree = "<group>"; };
@@ -97,20 +109,7 @@
 		6D7B56081DC266D100855ADF /* ExercisesDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesDataModel.swift; sourceTree = "<group>"; };
 		6D7B560A1DCA3B2100855ADF /* ExerciseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseType.swift; sourceTree = "<group>"; };
 		6D8F54B21DF861E700BFC8C0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		6D9E0BA31DEC6263002569C4 /* Firebase */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Firebase; path = ../MannDrops3/Pods/Firebase; sourceTree = "<group>"; };
-		6D9E0BA41DEC6263002569C4 /* FirebaseAnalytics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FirebaseAnalytics; path = ../MannDrops3/Pods/FirebaseAnalytics; sourceTree = "<group>"; };
-		6D9E0BA51DEC6263002569C4 /* FirebaseCore */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FirebaseCore; path = ../MannDrops3/Pods/FirebaseCore; sourceTree = "<group>"; };
-		6D9E0BA61DEC6263002569C4 /* FirebaseDatabase */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FirebaseDatabase; path = ../MannDrops3/Pods/FirebaseDatabase; sourceTree = "<group>"; };
-		6D9E0BA71DEC6263002569C4 /* FirebaseInstanceID */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FirebaseInstanceID; path = ../MannDrops3/Pods/FirebaseInstanceID; sourceTree = "<group>"; };
-		6D9E0BA81DEC6263002569C4 /* GoogleInterchangeUtilities */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GoogleInterchangeUtilities; path = ../MannDrops3/Pods/GoogleInterchangeUtilities; sourceTree = "<group>"; };
-		6D9E0BA91DEC6263002569C4 /* GoogleSymbolUtilities */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GoogleSymbolUtilities; path = ../MannDrops3/Pods/GoogleSymbolUtilities; sourceTree = "<group>"; };
-		6D9E0BAA1DEC6263002569C4 /* GoogleUtilities */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GoogleUtilities; path = ../MannDrops3/Pods/GoogleUtilities; sourceTree = "<group>"; };
-		6D9E0BAB1DEC6263002569C4 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Headers; path = ../MannDrops3/Pods/Headers; sourceTree = "<group>"; };
-		6D9E0BAC1DEC6263002569C4 /* Local Podspecs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Local Podspecs"; path = "../MannDrops3/Pods/Local Podspecs"; sourceTree = "<group>"; };
-		6D9E0BAD1DEC6264002569C4 /* Manifest.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Manifest.lock; path = ../MannDrops3/Pods/Manifest.lock; sourceTree = "<group>"; };
-		6D9E0BAE1DEC6264002569C4 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = ../MannDrops3/Pods/Pods.xcodeproj; sourceTree = "<group>"; };
-		6D9E0BB11DEC6264002569C4 /* SwiftEventBus */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SwiftEventBus; path = ../MannDrops3/Pods/SwiftEventBus; sourceTree = "<group>"; };
-		6D9E0BB21DEC6264002569C4 /* Target Support Files */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Target Support Files"; path = "../MannDrops3/Pods/Target Support Files"; sourceTree = "<group>"; };
+		6D8F54E71DFF033600BFC8C0 /* SingleGameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleGameData.swift; sourceTree = "<group>"; };
 		6DDCF5081D9D6C0800DBAF71 /* MannDrops.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MannDrops.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DDCF50B1D9D6C0800DBAF71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DDCF5121D9D6C0800DBAF71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,7 +120,8 @@
 		6DE835151DAFE5FD0026D658 /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		6DE835181DAFE8140026D658 /* LocalDBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDBManager.swift; sourceTree = "<group>"; };
 		6DE8CAD61DD38C2C0042DE8D /* TimersManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimersManager.swift; sourceTree = "<group>"; };
-		CD17C97C2CC1D02BCC2D2A32 /* Pods-MannDrops.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MannDrops.release.xcconfig"; path = "Pods/Target Support Files/Pods-MannDrops/Pods-MannDrops.release.xcconfig"; sourceTree = "<group>"; };
+		6E3FD3F970AEF6033F004696 /* Pods-MannDrops.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MannDrops.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MannDrops/Pods-MannDrops.debug.xcconfig"; sourceTree = "<group>"; };
+		D06A6B9597BEC6E0089C69DB /* Pods-MannDrops.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MannDrops.release.xcconfig"; path = "Pods/Target Support Files/Pods-MannDrops/Pods-MannDrops.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,29 +152,6 @@
 			name = "Sound Effects";
 			sourceTree = "<group>";
 		};
-		2C7EA3C070E5185C42B4E212 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6D9E0BA31DEC6263002569C4 /* Firebase */,
-				6D9E0BA41DEC6263002569C4 /* FirebaseAnalytics */,
-				6D9E0BA51DEC6263002569C4 /* FirebaseCore */,
-				6D9E0BA61DEC6263002569C4 /* FirebaseDatabase */,
-				6D9E0BA71DEC6263002569C4 /* FirebaseInstanceID */,
-				6D9E0BA81DEC6263002569C4 /* GoogleInterchangeUtilities */,
-				6D9E0BA91DEC6263002569C4 /* GoogleSymbolUtilities */,
-				6D9E0BAA1DEC6263002569C4 /* GoogleUtilities */,
-				6D9E0BAB1DEC6263002569C4 /* Headers */,
-				6D9E0BAC1DEC6263002569C4 /* Local Podspecs */,
-				6D9E0BAD1DEC6264002569C4 /* Manifest.lock */,
-				6D9E0BAE1DEC6264002569C4 /* Pods.xcodeproj */,
-				6D9E0BB11DEC6264002569C4 /* SwiftEventBus */,
-				6D9E0BB21DEC6264002569C4 /* Target Support Files */,
-				63FB5DDBF8F88644AD27EDCF /* Pods-MannDrops.debug.xcconfig */,
-				CD17C97C2CC1D02BCC2D2A32 /* Pods-MannDrops.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		2D475167D4A66BD91D0C7891 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +166,15 @@
 				6D02C9C21DDCA29800AA5CB3 /* AnimationsManager.swift */,
 			);
 			name = Animations;
+			sourceTree = "<group>";
+		};
+		6D09B81D1DFF27F60050A15B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D09B8311DFF27F60050A15B /* Pods_MannDrops.framework */,
+				6D09B8331DFF27F60050A15B /* SwiftEventBus.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		6D2CC89F1DEEDAD300490649 /* Controllers */ = {
@@ -241,23 +227,14 @@
 			name = ExercisesGeneration;
 			sourceTree = "<group>";
 		};
-		6D9E0BAF1DEC6264002569C4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6D9E0BC31DEC6264002569C4 /* Pods_MannDrops.framework */,
-				6D9E0BC51DEC6264002569C4 /* SwiftEventBus.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		6DDCF4FF1D9D6C0700DBAF71 = {
 			isa = PBXGroup;
 			children = (
 				6D011D2D1DDE33BB009BEF3B /* Sounds */,
 				6DDCF50A1D9D6C0800DBAF71 /* MannDrops */,
 				6DDCF5091D9D6C0800DBAF71 /* Products */,
-				2C7EA3C070E5185C42B4E212 /* Pods */,
 				2D475167D4A66BD91D0C7891 /* Frameworks */,
+				E39265FD49A4F5DC6215D141 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -313,7 +290,7 @@
 				28B36EC3C6C32BBEDA3B69BC /* RainDrop.swift */,
 				6D6FC8351DD9D65100811E98 /* RainDropFactory.swift */,
 				6D6FC8391DD9F56100811E98 /* RandomFactory.swift */,
-				6D66806D1DEC610000A148BB /* SingleGameData.swift */,
+				6D8F54E71DFF033600BFC8C0 /* SingleGameData.swift */,
 				28B36702CDA4033885F9902B /* Sound Effects */,
 			);
 			name = Model;
@@ -335,6 +312,29 @@
 				6DE835181DAFE8140026D658 /* LocalDBManager.swift */,
 			);
 			name = LocalDB;
+			sourceTree = "<group>";
+		};
+		E39265FD49A4F5DC6215D141 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D09B8111DFF27F60050A15B /* Firebase */,
+				6D09B8121DFF27F60050A15B /* FirebaseAnalytics */,
+				6D09B8131DFF27F60050A15B /* FirebaseCore */,
+				6D09B8141DFF27F60050A15B /* FirebaseDatabase */,
+				6D09B8151DFF27F60050A15B /* FirebaseInstanceID */,
+				6D09B8161DFF27F60050A15B /* GoogleInterchangeUtilities */,
+				6D09B8171DFF27F60050A15B /* GoogleSymbolUtilities */,
+				6D09B8181DFF27F60050A15B /* GoogleUtilities */,
+				6D09B8191DFF27F60050A15B /* Headers */,
+				6D09B81A1DFF27F60050A15B /* Local Podspecs */,
+				6D09B81B1DFF27F60050A15B /* Manifest.lock */,
+				6D09B81C1DFF27F60050A15B /* Pods.xcodeproj */,
+				6D09B81F1DFF27F60050A15B /* SwiftEventBus */,
+				6D09B8201DFF27F60050A15B /* Target Support Files */,
+				6E3FD3F970AEF6033F004696 /* Pods-MannDrops.debug.xcconfig */,
+				D06A6B9597BEC6E0089C69DB /* Pods-MannDrops.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,8 +389,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 6D9E0BAF1DEC6264002569C4 /* Products */;
-					ProjectRef = 6D9E0BAE1DEC6264002569C4 /* Pods.xcodeproj */;
+					ProductGroup = 6D09B81D1DFF27F60050A15B /* Products */;
+					ProjectRef = 6D09B81C1DFF27F60050A15B /* Pods.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -401,18 +401,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		6D9E0BC31DEC6264002569C4 /* Pods_MannDrops.framework */ = {
+		6D09B8311DFF27F60050A15B /* Pods_MannDrops.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Pods_MannDrops.framework;
-			remoteRef = 6D9E0BC21DEC6264002569C4 /* PBXContainerItemProxy */;
+			remoteRef = 6D09B8301DFF27F60050A15B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6D9E0BC51DEC6264002569C4 /* SwiftEventBus.framework */ = {
+		6D09B8331DFF27F60050A15B /* SwiftEventBus.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SwiftEventBus.framework;
-			remoteRef = 6D9E0BC41DEC6264002569C4 /* PBXContainerItemProxy */;
+			remoteRef = 6D09B8321DFF27F60050A15B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -422,24 +422,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D9E0BB61DEC6264002569C4 /* FirebaseDatabase in Resources */,
-				6D9E0BB31DEC6264002569C4 /* Firebase in Resources */,
+				6D09B8241DFF27F60050A15B /* FirebaseDatabase in Resources */,
+				6D09B8211DFF27F60050A15B /* Firebase in Resources */,
 				6DDCF5161D9D6C0800DBAF71 /* LaunchScreen.storyboard in Resources */,
-				6D9E0BB81DEC6264002569C4 /* GoogleInterchangeUtilities in Resources */,
-				6D9E0BBA1DEC6264002569C4 /* GoogleUtilities in Resources */,
-				6D9E0BB41DEC6264002569C4 /* FirebaseAnalytics in Resources */,
-				6D9E0BBB1DEC6264002569C4 /* Headers in Resources */,
+				6D09B8261DFF27F60050A15B /* GoogleInterchangeUtilities in Resources */,
+				6D09B8281DFF27F60050A15B /* GoogleUtilities in Resources */,
+				6D09B8221DFF27F60050A15B /* FirebaseAnalytics in Resources */,
+				6D09B8291DFF27F60050A15B /* Headers in Resources */,
 				6DDCF5131D9D6C0800DBAF71 /* Assets.xcassets in Resources */,
 				6D5227CA1DA6C7C6008BA765 /* GoogleService-Info.plist in Resources */,
-				6D9E0BBF1DEC6264002569C4 /* Target Support Files in Resources */,
-				6D9E0BBC1DEC6264002569C4 /* Local Podspecs in Resources */,
-				6D9E0BB91DEC6264002569C4 /* GoogleSymbolUtilities in Resources */,
+				6D09B82D1DFF27F60050A15B /* Target Support Files in Resources */,
 				069B1AA91DA544D50062D035 /* RainDropViewController.xib in Resources */,
-				6D9E0BBD1DEC6264002569C4 /* Manifest.lock in Resources */,
-				6D9E0BBE1DEC6264002569C4 /* SwiftEventBus in Resources */,
-				6D9E0BB51DEC6264002569C4 /* FirebaseCore in Resources */,
-				6D9E0BB71DEC6264002569C4 /* FirebaseInstanceID in Resources */,
+				6D09B82A1DFF27F60050A15B /* Local Podspecs in Resources */,
+				6D09B8271DFF27F60050A15B /* GoogleSymbolUtilities in Resources */,
 				6D8F54B31DF861E700BFC8C0 /* Main.storyboard in Resources */,
+				6D09B82B1DFF27F60050A15B /* Manifest.lock in Resources */,
+				6D09B82C1DFF27F60050A15B /* SwiftEventBus in Resources */,
+				6D09B8231DFF27F60050A15B /* FirebaseCore in Resources */,
+				6D09B8251DFF27F60050A15B /* FirebaseInstanceID in Resources */,
 				6D011D2E1DDE33BB009BEF3B /* Sounds in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,7 +512,6 @@
 				6D7B560B1DCA3B2100855ADF /* ExerciseType.swift in Sources */,
 				6D5227C81DA6A19D008BA765 /* ScoresDBModel.xcdatamodeld in Sources */,
 				6D6FC8361DD9D65100811E98 /* RainDropFactory.swift in Sources */,
-				6D66806E1DEC610000A148BB /* SingleGameData.swift in Sources */,
 				6D2CC8AF1DEF277600490649 /* Config.swift in Sources */,
 				28B3625AF0577CD058955606 /* RainDrop.swift in Sources */,
 				6DE835191DAFE8140026D658 /* LocalDBManager.swift in Sources */,
@@ -522,6 +521,7 @@
 				6D02C9C31DDCA29800AA5CB3 /* AnimationsManager.swift in Sources */,
 				6DE835111DAC0CCD0026D658 /* FirebaseDBManager.swift in Sources */,
 				6D6FC83A1DD9F56100811E98 /* RandomFactory.swift in Sources */,
+				6D8F54E81DFF033600BFC8C0 /* SingleGameData.swift in Sources */,
 				28B36C0E9B4DC8960D099406 /* SoundManager.swift in Sources */,
 				28B36C18A794C18B666589BF /* AnswersManager.swift in Sources */,
 			);
@@ -636,7 +636,7 @@
 		};
 		6DDCF51B1D9D6C0800DBAF71 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63FB5DDBF8F88644AD27EDCF /* Pods-MannDrops.debug.xcconfig */;
+			baseConfigurationReference = 6E3FD3F970AEF6033F004696 /* Pods-MannDrops.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MannDrops/Info.plist;
@@ -649,7 +649,7 @@
 		};
 		6DDCF51C1D9D6C0800DBAF71 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD17C97C2CC1D02BCC2D2A32 /* Pods-MannDrops.release.xcconfig */;
+			baseConfigurationReference = D06A6B9597BEC6E0089C69DB /* Pods-MannDrops.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MannDrops/Info.plist;
